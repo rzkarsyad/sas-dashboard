@@ -1,0 +1,25 @@
+$badge-padding-y: 0.4em;
+$badge-padding-x: 0.4em;
+
+$border-radius: 0.5rem;
+
+$navbar-nav-link-padding-x: 0.8em;
+$nav-link-padding-y: 0.8rem;
+$nav-link-hover-color: black;
+
+$nav-tabs-link-active-color: #3751FF;
+$nav-tabs-link-active-bg: #EBEEFF;
+$nav-tabs-link-active-border-color: #EBEEFF;
+
+$theme-colors: (
+  "primary": #3751FF,
+  "secondary":  #FAFAFA,
+  "success":    #198754,
+  "info":       #0DCAF0,
+  "warning":   #FFC107,
+  "danger":    #DC3545,
+  "light":     #F8F9FA,
+  "dark":      #212529,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";

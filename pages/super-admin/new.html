@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <title>Super Admin - New</title>
+</head>
+<body>
+  
+    <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid mt-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="me-2 nav-item">
+                <a class="nav-link active" aria-current="page" href="new.html">New  <span class="ms-2 badge bg-primary">10</span></a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">All</a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">Status</a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">Downloads</a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">Digital</a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
+              </li>
+              <li class="me-2 nav-item">
+                <a class="nav-link" href="#">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
+              </li>
+            </ul>
+
+            <div class="btn-group">
+              <button type="button" class="btn text-white dropdown-toggle" style="background-color: #4136A4;" data-bs-toggle="dropdown" aria-expanded="false">
+              Admin
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">VA Dashboard</button></li>
+              </ul>
+            </div>
+
+            <div class="btn-group ms-4">
+              <img src="../../img/avatarnav.png" alt="Avatar" class="rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" width="48px">
+              <ul class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-secondary"></i>
+                  Profile
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-secondary"></i>
+                Settings
+            </a>
+            <a class="dropdown-item" href="#">
+                <i class="fas fa-list fa-sm fa-fw mr-2 text-secondary"></i>
+                Activity Log
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                Logout
+            </a>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Divider -->
+    <hr class="mt-2 bg-gray border-2 border-top border-gray">
+    <!-- End Divider -->
+
+    <div class="content-wrapper mt-4">
+        <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-md-2">
+                <div class="input-group">
+                  <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                          <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                      </button>
+                  </span>
+                </div>
+              </div>
+              <div class="col-4">
+                  <button type="button" class="btn bg-secondary border">New</button>
+                  <button type="button" class="ms-1 btn bg-white border">All</button>
+                  <button class="ms-1 btn dropdown-toggle" type="button" style="background-color: #C5E6F9; color: #528DAC;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pick Artist
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+              </div> 
+              <div class="col-6">
+                <div class="d-flex flex-row-reverse bd-highlight">
+                  <div class="p-2 d-flex bd-highlight align-items-center">
+                    <div class="form-check ms-3">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Digital
+                      </label>
+                    </div>
+                    <div class="form-check ms-3">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                      <label class="form-check-label" for="flexCheckDefault1">
+                        Print
+                      </label>
+                    </div>
+                    <div class="form-check ms-3">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                      <label class="form-check-label" for="flexCheckDefault2">
+                        Framed
+                      </label>
+                    </div>
+                    <button class="btn text-white ms-3" style="background-color: #FE753F;" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+                    <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#addArtist"><i class="fa-regular fa-plus me-2"></i>Add Artist</button>
+                  </div>
+                </div>
+               
+              </button>
+              </div>
+            </div>
+
+            <table class="mt-2 table table-borderless">
+              <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Pets</th>
+                    <th scope="col">Style</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">BG</th>
+                    <th style="width: 25%;" scope="col">Pictures</th>
+                    <th style="width: 10%;"scope="col">Poster Name</th>
+                    <th style="width: 8%;" scope="col">Notes</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle" style="border-radius: 10px; border:2px red">
+                    <th scope="row">1</th>
+                    <td>1008</td>
+                    <td>Marvin McKinney</td>
+                    <td>sara.cruz@example.com</td>
+                    <td>4</td>
+                    <td>Modern</td>
+                    <td>Digital File</td>
+                    <td>8x10</td>
+                    <td>Daisy</td>
+                    <td>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork5.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork6.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork7.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <a href="" class="delete">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </a>
+                        </div>
+                        
+                      <button class="btn btn-sm rounded ms-1 mt-1" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                    </td>
+                    <td>Steve, Tammy, Li</td>
+                    <td>
+                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                    </td>
+                    <td>
+                      <a href=""><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <a href="" type="checkbox"><i class="fa-solid fa-star ms-3" style="color: #F69B12;"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+          </table>          
+        </div>
+    </div>
+
+     <!-- Modal Add Artist-->
+     <div class="modal fade" id="addArtist" tabindex="-1" aria-labelledby="addArtistLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addArtistLabel">New Artist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Pets</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Style</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Type</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Size</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">BG</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Pictures</label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            <div class="col mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Poster Name</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal Delete -->
+      <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteArtistModalLabel">Delete Artist</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure want to delete <b>Artist Name</b>?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
