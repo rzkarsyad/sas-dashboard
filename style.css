@@ -35,17 +35,17 @@ div.show-image {
 div.show-image:hover img {
   opacity: 0.5;
 }
-div.show-image:hover a {
+div.show-image:hover button {
   display: block;
 }
-div.show-image a {
+div.show-image button {
   position: absolute;
   display: none;
 }
 
-div.show-image a.delete {
-  top: 0;
-  left: 1px;
+div.show-image button.delete {
+  top: -5px;
+  left: -6px;
 }
 
 table tr:last-child th:last-child,
