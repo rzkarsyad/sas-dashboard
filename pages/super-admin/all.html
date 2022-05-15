@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../main.css">    
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/component-custom-switch.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <title>Super Admin - All</title>
+</head>
+<body>
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid mt-2">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="me-2 nav-item">
+              <a class="nav-link" aria-current="page" href="new.html">New  <span class="ms-2 text-black-50  badge bg-secondary">10</span></a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link active px-4" href="all.html">All</a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link" href="#">Status</a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link" href="#">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link" href="#">Downloads</a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link" href="#">Digital</a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link" href="#">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
+            </li>
+            <li class="me-2 nav-item">
+              <a class="nav-link" href="#">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
+            </li>
+          </ul>
+                    
+          <div class="btn-group">
+            <button type="button" class="btn text-white dropdown-toggle" style="background-color: #4136A4;" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button">VA Dashboard</button></li>
+            </ul>
+          </div>
+
+          <div class="btn-group ms-4">
+            <img src="../../img/avatarnav.png" alt="Avatar" class="rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" width="48px">
+            <ul class="dropdown-menu dropdown-menu-end">
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-secondary"></i>
+                Profile
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fas fa-cogs fa-sm fa-fw mr-2 text-secondary"></i>
+              Settings
+          </a>
+          <a class="dropdown-item" href="#">
+              <i class="fas fa-list fa-sm fa-fw mr-2 text-secondary"></i>
+              Activity Log
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+              Logout
+          </a>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  <!-- End Navbar -->
+
+  <!-- Divider -->
+  <hr class="mt-2 bg-gray border-2 border-top border-gray">
+  <!-- End Divider -->
+
+  <!-- Content -->
+  <div class="content-wrapper mt-4">
+      <div class="container-fluid">        
+
+          <!-- Top Bar -->
+          <div class="row">
+            <div class="col-md-2">
+              <div class="input-group">
+                <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                        <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                    </button>
+                </span>
+              </div>
+            </div>
+            <div class="col-4">
+                <button type="button" class="btn bg-secondary border">New</button>
+                <button type="button" class="ms-1 btn bg-white border">All</button>
+                <button class="ms-1 btn dropdown-toggle" type="button" style="background-color: #C5E6F9; color: #528DAC;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Pick Artist
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div> 
+            <div class="col-6 text-end">
+              
+              <div class="form-check form-switch form-switch-md form-check-inline">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label mt-1 ms-2" for="flexSwitchCheckChecked">Proof</label>
+              </div>
+              <div class="form-check form-switch form-switch-md form-check-inline">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked1" checked>
+                <label class="form-check-label mt-1 ms-2" for="flexSwitchCheckChecked1">Art</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">Digital</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Print</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+                <label class="form-check-label" for="inlineCheckbox3">Framed</label>
+              </div>
+              <button class="btn text-white ms-3" style="background-color: #FE753F;" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+             
+            </button>
+            </div>
+          </div>
+          <!-- End Topbar -->
+
+          <table class="mt-2 table table-borderless">
+            <thead>
+                <tr>
+                  <th scope="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    </div>
+                  </th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Pets</th>
+                  <th scope="col">Style</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">BG</th>
+                  <th style="width: 12%;" scope="col">Pictures</th>
+                  <th style="width: 10%;" scope="col">Poster Name</th>
+                  <th style="width: 8%;" scope="col">Notes</th>
+                  <th scope="col">Proof</th>
+                  <th scope="col">Art</th>
+                  <th style="width: 8%;" scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-secondary align-middle">
+                  <th scope="row" class="startRow">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    </div>
+                  </th>
+                  <td>1008</td>
+                  <td>Marvin McKinney</td>
+                  <td>sara.cruz@example.com</td>
+                  <td>4</td>
+                  <td>Modern</td>
+                  <td>Digital File</td>
+                  <td>8x10</td>
+                  <td>Daisy</td>
+                  <td>
+                      <button class="btn btn-sm btn-view" data-bs-toggle="collapse" data-bs-target="#collapseImage1" aria-expanded="false" aria-controls="collapseImage1">View Images <i class="fa-solid fa-angle-down"></i></button>
+                    </td>
+                  <td>Steve, Tammy, Li</td>
+                  <td>                  
+                    <button type="button" class="btn btn-secondary btn-notes" data-bs-toggle="modal" data-bs-target="#notesModal"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                    </div>
+                  </td>
+                  
+                  <td class="endRow star">
+                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label class="star-sm" for="st1"></label>    
+                  </td>
+                </tr>
+                <tr class="collapseContainingDiv">
+                  <td colspan="100%" class="fullRow">
+                    <div class="collapse" id="collapseImage1" style="padding-left: 55%;">
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork5.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork6.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                      <div class="show-image rounded">
+                        <img src="../../img/artwork7.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                          </button>
+                      </div>
+                    <button class="btn btn-sm rounded ms-1 mt-1" style="background-color: #EBEEFF;" data-bs-toggle="modal" data-bs-target="#uploadPict"><i class="fa-solid fa-plus text-primary"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+
+      </div>
+  </div>
+  <!-- End Content -->
+
+  <!-- Modal Add Pictures -->
+  <div class="modal fade" id="uploadPict" tabindex="-1" aria-labelledby="uploadPict" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="uploadPict">Upload New Picture</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Pictures</label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="notesModal" tabindex="-1" aria-labelledby="notesModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="notesModalLabel">Marvin McKinney Notes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac sem augue. Ut quis ipsum ligula. Nunc suscipit sagittis felis in feugiat. Aliquam erat volutpat. Donec id justo justo. Etiam varius gravida gravida. Nunc blandit, justo at pulvinar finibus, nulla diam mollis dui, ut ullamcorper augue nibh nec lorem. Ut varius pharetra bibendum. Aliquam lacinia porttitor magna nec consectetur. Aliquam sed varius mi, et cursus ante.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <!-- Modal Delete -->
+   <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteArtistModalLabel">Delete Artist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure want to delete <b>Artist Name</b>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <!-- Modal Delete -->
+  <div class="modal fade" id="delImageModal" tabindex="-1" aria-labelledby="delImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="delImageModalLabel">Delete Picture</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure want to delete this picture?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

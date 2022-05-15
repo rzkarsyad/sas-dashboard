@@ -25,7 +25,7 @@
                 <a class="nav-link active" aria-current="page" href="new.html">New  <span class="ms-2 badge bg-primary">10</span></a>
               </li>
               <li class="me-2 nav-item">
-                <a class="nav-link" href="#">All</a>
+                <a class="nav-link px-4" href="all.html">All</a>
               </li>
               <li class="me-2 nav-item">
                 <a class="nav-link" href="#">Status</a>
@@ -91,7 +91,8 @@
     <div class="content-wrapper mt-4">
         <div class="container-fluid">
 
-            <div class="row">
+          <!-- Top Bar -->
+          <div class="row">
               <div class="col-md-2">
                 <div class="input-group">
                   <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
@@ -114,40 +115,35 @@
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
               </div> 
-              <div class="col-6">
-                <div class="d-flex flex-row-reverse bd-highlight">
-                  <div class="p-2 d-flex bd-highlight align-items-center">
-                    <div class="form-check ms-3">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Digital
-                      </label>
-                    </div>
-                    <div class="form-check ms-3">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                      <label class="form-check-label" for="flexCheckDefault1">
-                        Print
-                      </label>
-                    </div>
-                    <div class="form-check ms-3">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                      <label class="form-check-label" for="flexCheckDefault2">
-                        Framed
-                      </label>
-                    </div>
-                    <button class="btn text-white ms-3" style="background-color: #FE753F;" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
-                    <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#addArtist"><i class="fa-regular fa-plus me-2"></i>Add Artist</button>
-                  </div>
+              <div class="col-6 text-end">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Digital</label>
                 </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                  <label class="form-check-label" for="inlineCheckbox2">Print</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox3">Framed</label>
+                </div>
+                <button class="btn text-white ms-3" style="background-color: #FE753F;" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+                <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#addArtist"><i class="fa-regular fa-plus me-2"></i>Add Artist</button>               
                
               </button>
               </div>
             </div>
+          <!-- End Topbar -->
 
-            <table class="mt-2 table table-borderless">
+          <table class="mt-2 table table-borderless">
               <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      </div>
+                    </th>
                     <th scope="col">ID</th>
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
@@ -163,8 +159,81 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="bg-secondary align-middle" style="border-radius: 10px; border:2px red">
-                    <th scope="row">1</th>
+                  <tr class="bg-secondary align-middle">
+                    <th class="startRow" scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      </div>
+                    </th>
+                    <td>1008</td>
+                    <td>Marvin McKinney</td>
+                    <td>sara.cruz@example.com</td>
+                    <td>4</td>
+                    <td>Modern</td>
+                    <td>Digital File</td>
+                    <td>8x10</td>
+                    <td>Daisy</td>
+                    <td>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork5.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork6.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        <div class="show-image rounded">
+                          <img src="../../img/artwork7.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                        
+                      <button class="btn btn-sm rounded ms-1 mt-1" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                    </td>
+                    <td>Steve, Tammy, Li</td>
+                    <td>
+                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                    </td>
+                    <td class="endRow">
+                      <a href=""><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <a href="" type="checkbox"><i class="fa-solid fa-star ms-3" style="color: #F69B12;"></i></a>
+                    </td>
+                  </tr>
+                  <tr class="bg-secondary align-middle">
+                    <th class="startRow" scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      </div>
+                    </th>
                     <td>1008</td>
                     <td>Marvin McKinney</td>
                     <td>sara.cruz@example.com</td>
@@ -223,7 +292,7 @@
                     <td>
                       <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td>
+                    <td class="endRow">
                       <a href=""><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
                       <a href="" type="checkbox"><i class="fa-solid fa-star ms-3" style="color: #F69B12;"></i></a>
                     </td>
@@ -291,6 +360,28 @@
       </div>
     </div>
 
+    <!-- Modal Add Pictures -->
+    <div class="modal fade" id="uploadPict" tabindex="-1" aria-labelledby="uploadPict" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uploadPict">Upload New Picture</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Pictures</label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
      <!-- Modal Delete -->
       <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -309,7 +400,6 @@
           </div>
         </div>
       </div>
-
       
      <!-- Modal Delete -->
       <div class="modal fade" id="delImageModal" tabindex="-1" aria-labelledby="delImageModalLabel" aria-hidden="true">
@@ -329,8 +419,6 @@
           </div>
         </div>
       </div>
-
-      
 
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>

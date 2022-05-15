@@ -4,26 +4,12 @@
 
 table {
   border-collapse: separate;
-  border-spacing: 0 12px;
+  border-spacing: 0 8px;
 }
 
 td {
   color: #667085;
-}
-
-table tr:first-child th:first-child,
-table tr:first-child td:first-child {
-  border-top-left-radius: 15px;
-}
-
-table tr:first-child th:last-child,
-table tr:first-child td:last-child {
-  border-top-right-radius: 15px;
-}
-
-table tr:last-child th:first-child,
-table tr:last-child td:first-child {
-  border-bottom-left-radius: 15px;
+  font-weight: 400;
 }
 
 div.show-image {
@@ -51,4 +37,164 @@ div.show-image button.delete {
 table tr:last-child th:last-child,
 table tr:last-child td:last-child {
   border-bottom-right-radius: 15px;
+}
+
+// Custom styling - Not neccesary for the sizes.
+body {
+  background: gray;
+}
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: green;
+  border-color: darken(green, 10%);
+}
+
+//---------------CUSTOM SIZE STYLING---------------//
+
+// Add class `.custom-switch-lg` to a `custom-switch`
+.custom-switch.custom-switch-lg {
+  padding-bottom: 1rem;
+  padding-left: 2.25rem;
+
+  & .custom-control-label {
+    padding-left: 0.75rem;
+    padding-top: 0.15rem;
+
+    &::before {
+      border-radius: 1rem;
+      height: 1.5rem;
+      width: 2.5rem;
+    }
+
+    &::after {
+      border-radius: 0.65rem;
+      height: calc(1.5rem - 4px);
+      width: calc(1.5rem - 4px);
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    transform: translateX(1rem);
+  }
+}
+
+.form-check-input {
+  clear: left;
+}
+
+.form-switch.form-switch-md {
+  margin-bottom: 1rem; /* JUST FOR STYLING PURPOSE */
+}
+
+.form-switch.form-switch-md .form-check-input {
+  height: 1.5rem;
+  width: calc(2rem + 0.75rem);
+  border-radius: 3rem;
+}
+
+.btn-view {
+  color: #00ab66;
+  font-weight: 400;
+  background-color: #e1f2eb;
+  border-radius: 8px;
+}
+
+.btn-view:hover {
+  color: #02d47f;
+}
+
+.btn-notes {
+  color: #667085;
+  font-weight: 400;
+}
+
+.menu {
+  position: relative;
+  top: 150px;
+  width: 200px;
+  text-align: center;
+  background-color: #1d1f20;
+  color: #809a00;
+  font-size: 22px;
+  margin: 0px auto;
+  border: 3px dashed gray;
+}
+
+.list {
+  max-height: 0;
+  transition: max-height 0.75s ease-out;
+  overflow: hidden;
+
+  li {
+    border-top: 3px dashed gray;
+  }
+}
+
+.active {
+  max-height: 300px;
+  transition: max-height 0.75s ease-in;
+}
+
+.wrapper {
+  margin: 0px auto;
+  width: 100%;
+  height: 600px;
+  background-color: #1d1f20;
+}
+
+.startRow {
+  border-radius: 12px 0 0 12px;
+}
+
+.endRow {
+  border-radius: 0 12px 12px 0;
+}
+
+tr .fullRow {
+  border-radius: 0 0 12px 12px;
+  border-spacing: 0 0;
+}
+
+.collapseContainingDiv td {
+  padding: 0 !important;
+}
+
+.content {
+  text-align: center;
+}
+
+.star {
+  position: relative;
+  border: none;
+  height: 0;
+  width: 0;
+}
+
+.star-sm {
+  font-size: 12px;
+}
+
+.star input {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.star label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.star input:checked ~ label:before {
+  color: #ffc107;
 }
