@@ -159,6 +159,7 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <!-- Row 1 -->
                   <tr class="bg-secondary align-middle">
                     <th class="startRow" scope="row">
                       <div class="form-check">
@@ -174,131 +175,368 @@
                     <td>8x10</td>
                     <td>Daisy</td>
                     <td>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork5.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork6.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork7.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        
-                      <button class="btn btn-sm rounded ms-1 mt-1" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                        <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>                        
                     </td>
                     <td>Steve, Tammy, Li</td>
                     <td>
                       <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td class="endRow">
-                      <a href=""><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                      <a href="" type="checkbox"><i class="fa-solid fa-star ms-3" style="color: #F69B12;"></i></a>
-                    </td>
+                    <td class="endRow star">
+                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label class="star-sm" for="st1"></label>    
+                  </td>
                   </tr>
+
+                  <!-- Row 2 -->
                   <tr class="bg-secondary align-middle">
                     <th class="startRow" scope="row">
                       <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                       </div>
                     </th>
-                    <td>1008</td>
-                    <td>Marvin McKinney</td>
-                    <td>sara.cruz@example.com</td>
-                    <td>4</td>
-                    <td>Modern</td>
+                    <td>1009</td>
+                    <td>Ronald Richards</td>
+                    <td>jessica.hanson@example.com</td>
+                    <td>3</td>
+                    <td>Line Art</td>
                     <td>Digital File</td>
                     <td>8x10</td>
                     <td>Daisy</td>
                     <td>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork5.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork6.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        <div class="show-image rounded">
-                          <img src="../../img/artwork7.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
+                        <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
                         </div>
-                        
-                      <button class="btn btn-sm rounded ms-1 mt-1" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                        <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>                        
                     </td>
-                    <td>Steve, Tammy, Li</td>
+                    <td>Lou</td>
                     <td>
                       <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td class="endRow">
-                      <a href=""><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                      <a href="" type="checkbox"><i class="fa-solid fa-star ms-3" style="color: #F69B12;"></i></a>
+                    <td class="endRow star">
+                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label class="star-sm" for="st1"></label>    
+                  </td>
+                  </tr>
+
+                  <!-- Row 3 -->
+                  <tr class="bg-secondary align-middle">
+                    <th class="startRow" scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      </div>
+                    </th>
+                    <td>1010</td>
+                    <td>Annette Black</td>
+                    <td>alma.lawson@example.com</td>
+                    <td>5</td>
+                    <td>Modern</td>
+                    <td>Digital File</td>
+                    <td>24x36</td>
+                    <td>Daisy</td>
+                    <td>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>                        
                     </td>
+                    <td>Coco & Walt</td>
+                    <td>
+                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                    </td>
+                    <td class="endRow star">
+                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label class="star-sm" for="st1"></label>    
+                  </td>
+                  </tr>
+
+                  <!-- Row 4 -->
+                  <tr class="bg-secondary align-middle">
+                    <th class="startRow" scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      </div>
+                    </th>
+                    <td>1011</td>
+                    <td>Devon Lane</td>
+                    <td>kenzi.lawson@example.com</td>
+                    <td>2</td>
+                    <td>Line Art</td>
+                    <td>Digital File</td>
+                    <td>12x16</td>
+                    <td>Pale Leaf</td>
+                    <td>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <div class="image mt-2 mb-2 me-3">
+                        <div class="overlay">
+                          <a href="#delImageModal" class="edit-image-btn pull-right"  data-bs-toggle="modal" data-bs-target="#delImageModal">
+                               <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                           </a>
+                        </div>
+                        <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                      </div>
+
+                      <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>                        
+                    </td>
+                    <td>Sam</td>
+                    <td>
+                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                    </td>
+                    <td class="endRow star">
+                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st1" value="1" />
+                      <label class="star-sm" for="st1"></label>    
+                  </td>
                   </tr>
                 </tbody>
-          </table>          
+          </table>  
+          
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
         </div>
     </div>
 
@@ -401,7 +639,7 @@
         </div>
       </div>
       
-     <!-- Modal Delete -->
+     <!-- Modal Delete Image -->
       <div class="modal fade" id="delImageModal" tabindex="-1" aria-labelledby="delImageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -420,8 +658,22 @@
         </div>
       </div>
 
+      <!-- The Modal -->
+      <div id="modal01" class="modalThumb"  onclick="this.style.display='none'">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modalThumb-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+      </div>
+
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../main.js"></script>
 </body>
 </html>
