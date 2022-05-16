@@ -28,22 +28,22 @@
               <a class="nav-link px-4" href="all.html">All</a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="#">Status</a>
+              <a class="nav-link" href="status.html">Status</a>
             </li>
             <li class="me-2 nav-item">
               <a class="nav-link" href="#">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="#">Downloads</a>
+              <a class="nav-link" href="downloads.html">Downloads</a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="#">Digital</a>
+              <a class="nav-link" href="digital.html">Digital</a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="#">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
+              <a class="nav-link" href="print.html">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="#">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
+              <a class="nav-link" href="waiting-approval.html">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
             </li>
           </ul>
                     
@@ -82,7 +82,7 @@
         
       </div>
     </nav>
-  <!-- End Navbar -->
+    <!-- End Navbar -->
 
   <!-- Divider -->
   <hr class="mt-2 bg-gray border-2 border-top border-gray">
@@ -91,6 +91,124 @@
   <!-- Content -->
   <div class="content-wrapper mt-4">
       <div class="container-fluid">
+         <!-- Top Bar -->
+         <div class="row">
+          <div class="col-4">
+              <div class="input-group">
+                  <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search Customer" id="example-search-input">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                          <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                      </button>
+                      <button class="btn btn-primary ms-3">
+                          <i class="fa-regular fa-plus me-2"></i>Add Artist
+                      </button>
+                  </span>
+                </div>
+          </div> 
+        </div>
+        <!-- End Topbar -->
+        <table class="mt-2 table table-borderless">
+          <thead>
+              <tr>
+                <th class="active" scope="col">
+                  <div class="form-check">
+                      <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                  </div>
+                </th>
+                <th scope="col">#</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Download URL</th>
+                <th scope="col">Approval Date</th>
+                <th scope="col">Expiry Date</th>
+                <th style="width: 8%;" scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-secondary align-middle">
+                  <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                      </div>
+                    </th>
+                <td>
+                  <div class="show-image rounded">
+                      <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                        <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                          <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                        </button>
+                    </div>
+                </td>
+                <td>Marvin McKinney<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                <td>http://www.toughzap.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                <td>02-05-2022</td>
+                <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
+                <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
+              </tr>
+                <tr class="bg-secondary align-middle">
+                  <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                      </div>
+                    </th>
+                  <td>
+                      <div class="show-image rounded">
+                          <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                  </td>
+                  <td>Ronald Richards<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                  <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                  <td>02-05-2022</td>
+                  <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
+                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
+              </tr>
+  
+              <tr class="bg-secondary align-middle">
+                  <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                      </div>
+                    </th>
+                  <td>
+                      <div class="show-image rounded">
+                          <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                  </td>
+                  <td>Annette Black<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                  <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                  <td>02-05-2022</td>
+                  <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
+                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
+              </tr>
+  
+              <tr class="bg-secondary align-middle">
+                  <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                      </div>
+                    </th>
+                  <td>
+                      <div class="show-image rounded">
+                          <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
+                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
+                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
+                            </button>
+                        </div>
+                  </td>
+                  <td>Devon Lane<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                  <td>http://www.unso.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                  <td>02-05-2022</td>
+                  <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
+                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
+              </tr>
+            </tbody>
+          </table>
       </div>
   </div>
   <!-- End Content -->
