@@ -93,32 +93,28 @@
   <div class="content-wrapper mt-4">
       <div class="container-fluid">        
 
-          <!-- Top Bar -->
-          <div class="row">
-              <div class="col-6">
-                <h4>Ready to Print</h4>
-            </div>
-            <div class="col-6">
-                <div class="input-group">
-                    <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search Customer" id="example-search-input">
-                    <span class="input-group-append">
-                        <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
-                            <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
-                        </button>
-                        <button class="btn btn-outline-danger ms-3" data-bs-toggle="modal" data-bs-target="#deleteArtistModal">
-                            <i class="fa-regular fa-trash-can me-2"></i>Delete
-                        </button>
-                        <button class="btn btn-outline-success ms-3">
-                            <i class="fa-solid fa-check me-2"></i>Complete
-                        </button>
-                        <button class="btn btn-outline-primary ms-3">
-                            <i class="fa-solid fa-print me-2"></i>Add To Print
-                        </button>
-                    </span>
-                  </div>
-            </div> 
+         <!-- Top Bar -->
+        <div class="d-flex bd-highlight">
+          <div class="me-auto p-2 bd-highlight">
+            <h3>Downloads Data</h3>
           </div>
-          <!-- End Topbar -->
+          <div class="p-1 bd-highlight">
+            <div class="input-group">
+              <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
+              <span class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                      <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                  </button>
+                </span>
+            </div>
+          </div>
+          <div class="p-1 bd-highlight">
+            <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+            <button class="btn btn-success text-white ms-1"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button>
+            <button class="btn btn-primary ms-1"><i class="fa-solid fa-print me-2"></i>Add To Print</button>
+          </div>
+        </div>
+        <!-- End Top Bar -->
 
           <table class="mt-2 table table-borderless">
             <thead>
@@ -145,18 +141,14 @@
                         </div>
                       </th>
                   <td>
-                    <div class="show-image rounded">
-                        <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                          </button>
-                      </div>
+                    <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                   </td>
-                  <td>Marvin McKinney<button type="button" class="btn-sm btn btn-outline-primary float-end " data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Name">Copy</button></td>
-                  <td>http://www.toughzap.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>02-05-2022</td>
-                  <td><button type="button" class="btn-sm btn btn-primary"><i class="fa-solid fa-print me-2"></i>Print</button></td>
-                  <td><button type="button" class="btn btn-sm btn-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
+                  <td>Marvin McKinney<button type="button" class="btn-sm btn rounded btn-outline-primary float-end " data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                  <td>http://www.toughzap.com<button type="button" class="btn-sm btn rounded btn-outline-primary float-end"  data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                  <td>02-05-2022</td>   
+
+                  <td><button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-print me-2 pb-1"></i>Print</button></td>
+                  <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
                   <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
                 </tr>
                   <tr class="bg-secondary align-middle">
@@ -166,18 +158,13 @@
                         </div>
                       </th>
                     <td>
-                        <div class="show-image rounded">
-                            <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                              <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                                <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                              </button>
-                          </div>
+                      <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
-                    <td>Ronald Richards<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                    <td>Ronald Richards<button type="button" class="btn-sm btn rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm btn rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
                     <td>02-05-2022</td>
-                    <td><button type="button" class="btn-sm btn btn-primary"><i class="fa-solid fa-print me-2"></i>Print</button></td>
-                    <td><button type="button" class="btn btn-sm btn-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
+                    <td><button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-print me-2 pb-1"></i>Print</button></td>
+                    <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
                     <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
                 </tr>
 
@@ -188,18 +175,13 @@
                         </div>
                       </th>
                     <td>
-                        <div class="show-image rounded">
-                            <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                              <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                                <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                              </button>
-                          </div>
+                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
-                    <td>Annette Black<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                    <td>Annette Black<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
                     <td>02-05-2022</td>
-                    <td><button type="button" class="btn-sm btn btn-primary"><i class="fa-solid fa-print me-2"></i>Print</button></td>
-                    <td><button type="button" class="btn btn-sm btn-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
+                    <td><button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-print me-2 pb-1"></i>Print</button></td>
+                    <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
                     <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
                 </tr>
 
@@ -210,22 +192,20 @@
                         </div>
                       </th>
                     <td>
-                        <div class="show-image rounded">
-                            <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                              <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                                <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                              </button>
-                          </div>
+                      <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
-                    <td>Devon Lane<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td>http://www.unso.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
+                    <td>Devon Lane<button type="button" class="btn-sm btn rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.unso.com<button type="button" class="btn-sm btn rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
                     <td>02-05-2022</td>
-                    <td><button type="button" class="btn-sm btn btn-primary"><i class="fa-solid fa-print me-2"></i>Print</button></td>
-                    <td><button type="button" class="btn btn-sm btn-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
+                    <td><button type="button" class="btn btn-outline-primary"><i class="fa-solid fa-print me-2 pb-1"></i>Print</button></td>
+                    <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
                     <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
                 </tr>
               </tbody>
         </table>
+        <div class="col text-center">
+          <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+        </div>
     </div>
 </div>
   <!-- End Content -->
@@ -253,72 +233,20 @@
     </div>
   </div>
   
+  <!-- The Modal Show Image -->
+<div id="modal01" class="modalThumb"  onclick="this.style.display='none'">
+<!-- The Close Button -->
+<span class="close">&times;</span>
+
+<!-- Modal Content (The Image) -->
+<img class="modalThumb-content" id="img01">
+
+<!-- Modal Caption (Image Text) -->
+<div id="caption"></div></div>
+
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script>
-    $(function(){
-
-        //button select all or cancel
-        $("#select-all").click(function () {
-            var all = $("input.select-all")[0];
-            all.checked = !all.checked
-            var checked = all.checked;
-            $("input.select-item").each(function (index,item) {
-                item.checked = checked;
-            });
-        });
-
-        //button select invert
-        $("#select-invert").click(function () {
-            $("input.select-item").each(function (index,item) {
-                item.checked = !item.checked;
-            });
-            checkSelected();
-        });
-
-        //button get selected info
-        $("#selected").click(function () {
-            var items=[];
-            $("input.select-item:checked:checked").each(function (index,item) {
-                items[index] = item.value;
-            });
-            if (items.length < 1) {
-                alert("no selected items!!!");
-            }else {
-                var values = items.join(',');
-                console.log(values);
-                var html = $("<div></div>");
-                html.html("selected:"+values);
-                html.appendTo("body");
-            }
-        });
-
-        //column checkbox select all or cancel
-        $("input.select-all").click(function () {
-            var checked = this.checked;
-            $("input.select-item").each(function (index,item) {
-                item.checked = checked;
-            });
-        });
-
-        //check selected items
-        $("input.select-item").click(function () {
-            var checked = this.checked;
-            console.log(checked);
-            checkSelected();
-        });
-
-        //check is all selected
-        function checkSelected() {
-            var all = $("input.select-all")[0];
-            var total = $("input.select-item").length;
-            var len = $("input.select-item:checked:checked").length;
-            console.log("total:"+total);
-            console.log("len:"+len);
-            all.checked = len===total;
-        }
-    });
-</script>
+  <script src="../../main.js"></script>
 </body>
 </html>

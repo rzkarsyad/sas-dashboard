@@ -31,7 +31,7 @@
                 <a class="nav-link" href="status.html">Status</a>
               </li>
               <li class="me-2 nav-item">
-                <a class="nav-link" href="#">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+                <a class="nav-link" href="revision.html">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
               </li>
               <li class="me-2 nav-item">
                 <a class="nav-link" href="downloads.html">Downloads</a>
@@ -104,8 +104,12 @@
                 </div>
               </div>
               <div class="col-4">
-                  <button type="button" class="btn bg-secondary border">New</button>
-                  <button type="button" class="ms-1 btn bg-white border">All</button>
+                <input type="radio" class="btn-check" name="options-outlined" id="new-outlined" autocomplete="off" checked>
+                <label class="btn btn-outline-secondary border btn-radio-check" for="new-outlined">New</label>
+
+                <input type="radio" class="btn-check" name="options-outlined" id="all-outlined" autocomplete="off">
+                <label class="btn btn-outline-secondary border btn-radio-check px-3 ms-1" for="all-outlined">All</label>
+
                   <button class="ms-1 btn dropdown-toggle" type="button" style="background-color: #C5E6F9; color: #528DAC;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Pick Artist
                   </button>
@@ -128,8 +132,8 @@
                   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
                   <label class="form-check-label" for="inlineCheckbox3">Framed</label>
                 </div>
-                <button class="btn text-white ms-3" style="background-color: #FE753F;" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
-                <button class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#addArtist"><i class="fa-regular fa-plus me-2"></i>Add Artist</button>               
+                <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+                <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#addArtist"><i class="fa-regular fa-plus me-2"></i>Add Artist</button>               
                
               </button>
               </div>
@@ -141,7 +145,7 @@
                   <tr>
                     <th scope="col">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input select-all" type="checkbox" value="" id="flexCheckChecked" name="select-all">
                       </div>
                     </th>
                     <th scope="col">ID</th>
@@ -152,10 +156,10 @@
                     <th scope="col">Type</th>
                     <th scope="col">Size</th>
                     <th scope="col">BG</th>
-                    <th style="width: 25%;" scope="col">Pictures</th>
-                    <th style="width: 10%;"scope="col">Poster Name</th>
-                    <th style="width: 8%;" scope="col">Notes</th>
-                    <th style="width: 8%;" scope="col">Action</th>
+                    <th style="width: 35%;" scope="col">Pictures</th>
+                    <th style="width: 8%;"scope="col">Poster Name</th>
+                    <th style="width: 7%;" scope="col">Notes</th>
+                    <th style="width: 5%;" scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -163,7 +167,7 @@
                   <tr class="bg-secondary align-middle">
                     <th class="startRow" scope="row">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
                       </div>
                     </th>
                     <td>1008</td>
@@ -243,7 +247,9 @@
                     </td>
                     <td>Steve, Tammy, Li</td>
                     <td>
-                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                      <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top"
+                      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.">
+                      <i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
                     <td class="endRow star">
                       <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
@@ -256,7 +262,7 @@
                   <tr class="bg-secondary align-middle">
                     <th class="startRow" scope="row">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
                       </div>
                     </th>
                     <td>1009</td>
@@ -336,7 +342,8 @@
                     </td>
                     <td>Lou</td>
                     <td>
-                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                      <button type="button" class="btn btn-secondary btn-note"data-bs-toggle="tooltip" data-bs-placement="top"
+                      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
                     <td class="endRow star">
                       <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
@@ -349,7 +356,7 @@
                   <tr class="bg-secondary align-middle">
                     <th class="startRow" scope="row">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
                       </div>
                     </th>
                     <td>1010</td>
@@ -429,7 +436,8 @@
                     </td>
                     <td>Coco & Walt</td>
                     <td>
-                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                      <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top"
+                      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
                     <td class="endRow star">
                       <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
@@ -442,7 +450,7 @@
                   <tr class="bg-secondary align-middle">
                     <th class="startRow" scope="row">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
                       </div>
                     </th>
                     <td>1011</td>
@@ -522,7 +530,8 @@
                     </td>
                     <td>Sam</td>
                     <td>
-                      <button type="button" class="btn btn-secondary"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                      <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top"
+                      title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
                     <td class="endRow star">
                       <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
@@ -534,8 +543,7 @@
           </table>  
           
           <div class="col text-center">
-
-            <button class="btn btn-secondary border btn-text">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
           </div>
         </div>
     </div>
@@ -658,7 +666,7 @@
         </div>
       </div>
 
-      <!-- The Modal -->
+      <!-- The Modal Show Image -->
       <div id="modal01" class="modalThumb"  onclick="this.style.display='none'">
 
         <!-- The Close Button -->

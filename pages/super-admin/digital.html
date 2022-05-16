@@ -5,12 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../main.css">    
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/component-custom-switch.css">
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
-    <title>Super Admin - Digital</title>
+    <title>Super Admin - Status</title>
 </head>
 <body>
 
@@ -32,7 +31,7 @@
               <a class="nav-link" href="status.html">Status</a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="#">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+              <a class="nav-link" href="revision.html">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
             </li>
             <li class="me-2 nav-item">
               <a class="nav-link" href="downloads.html">Downloads</a>
@@ -91,221 +90,163 @@
 
   <!-- Content -->
   <div class="content-wrapper mt-4">
-      <div class="container-fluid">        
+      <div class="container-fluid">
 
-          <!-- Top Bar -->
-          <div class="row">
-              <div class="col-7">
-                <h4>Data Digital</h4>
-            </div>
-            <div class="col-5">
-                <div class="input-group">
-                    <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search Customer" id="example-search-input">
-                    <span class="input-group-append">
-                        <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
-                            <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
-                        </button>
-                        <button class="btn btn-outline-danger ms-3" data-bs-toggle="modal" data-bs-target="#deleteArtistModal">
-                            <i class="fa-regular fa-trash-can me-2"></i>Delete
-                        </button>
-                        <button class="btn btn-outline-success ms-3">
-                            <i class="fa-solid fa-check me-2"></i>Complete
-                        </button>
-                    </span>
-                  </div>
-            </div> 
+        <!-- Top Bar -->
+        <div class="d-flex bd-highlight">
+          <div class="me-auto p-2 bd-highlight">
+            <h3>Digital Data</h3>
           </div>
-          <!-- End Topbar -->
+          <div class="p-1 bd-highlight">
+            <div class="input-group">
+              <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
+              <span class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                      <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                  </button>
+                </span>
+            </div>
+          </div>
+          <div class="p-1 bd-highlight">
+            <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+            <button class="btn btn-success text-white ms-1"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button>
+          </div>
+        </div>
+        <!-- End Top Bar -->
 
-          <table class="mt-2 table table-borderless">
-            <thead>
-                <tr>
-                  <th class="active" scope="col">
-                    <div class="form-check">
-                        <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
-                    </div>
-                  </th>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Complete</th>
-                  <th scope="col">URL</th>
-                  <th style="width: 8%;" scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-secondary align-middle">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+          <table class="table table-borderless">
+              <thead>
+                  <tr>
                     <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Complete</th>
+                    <th scope="col">URL</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Name">Copy</button></td>
+                    <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+
+                  <tr class="bg-secondary align-middle">
+                    <th class="active startRow" scope="col">
                         <div class="form-check">
                             <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
                         </div>
                       </th>
                   <td>
-                    <div class="show-image rounded">
-                        <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                          <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                            <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                          </button>
-                      </div>
+                    <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                   </td>
-                  <td>Marvin McKinney<button type="button" class="btn-sm btn btn-outline-primary float-end " data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Name">Copy</button></td>
-                  <td><button type="button" class="btn btn-sm btn-outline-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
-                  <td>http://www.toughzap.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
+                  <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Name">Copy</button></td>
+                  <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
+                  <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                  <td class="endRow">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                </td>
                 </tr>
-                  <tr class="bg-secondary align-middle">
-                    <th class="active" scope="col">
-                        <div class="form-check">
-                            <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                        </div>
-                      </th>
-                    <td>
-                        <div class="show-image rounded">
-                            <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                              <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                                <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                              </button>
-                          </div>
-                    </td>
-                    <td>Ronald Richards<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td><button type="button" class="btn btn-sm btn-outline-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
-                    <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-                </tr>
-
+                
                 <tr class="bg-secondary align-middle">
-                    <th class="active" scope="col">
-                        <div class="form-check">
-                            <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                        </div>
-                      </th>
-                    <td>
-                        <div class="show-image rounded">
-                            <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                              <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                                <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                              </button>
-                          </div>
-                    </td>
-                    <td>Annette Black<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td><button type="button" class="btn btn-sm btn-outline-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
-                    <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-                </tr>
+                  <th class="active startRow" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                      </div>
+                    </th>
+                <td>
+                  <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                </td>
+                <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Name">Copy</button></td>
+                <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
+                <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                <td class="endRow">
+                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+              </td>
+              </tr>
 
-                <tr class="bg-secondary align-middle">
-                    <th class="active" scope="col">
-                        <div class="form-check">
-                            <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                        </div>
-                      </th>
-                    <td>
-                        <div class="show-image rounded">
-                            <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                              <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                                <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                              </button>
-                          </div>
-                    </td>
-                    <td>Devon Lane<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td><button type="button" class="btn btn-sm btn-outline-success"><i class="fa-solid fa-check me-2"></i>Complete</button></td>
-                    <td>http://www.unso.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                    <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-                </tr>
-              </tbody>
-        </table>
-    </div>
-</div>
+              <tr class="bg-secondary align-middle">
+                <th class="active startRow" scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                    </div>
+                  </th>
+              <td>
+                <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+              </td>
+              <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Name">Copy</button></td>
+              <td><button type="button" class="btn-complete btn btn-outline-success"><i class="fa-solid fa-check me-2 pb-1"></i>Complete</button></td>
+              <td>http://www.unso.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+              <td class="endRow">
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+            </td>
+            </tr> 
+
+                </tbody>
+          </table>
+          <div class="col text-center">
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
   <!-- End Content -->
-  
-    <div class="col-md-12 text-center">
-        <button type="button" class="btn btn-sm btn-outline-secondary">View More<i class="ms-2 fa-solid fa-angle-down"></i></button>
-    </div>
-  
-  <!-- Modal Delete -->
-   <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="deleteArtistModalLabel">Delete Customer</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Are you sure want to delete <b>Customer Name</b>?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-danger">Yes</button>
-        </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Row</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure want to delete this row?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">Yes</button>
       </div>
     </div>
   </div>
-  
+</div>
+
+<!-- The Modal Show Image -->
+<div id="modal01" class="modalThumb"  onclick="this.style.display='none'">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modalThumb-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script>
-    $(function(){
-
-        //button select all or cancel
-        $("#select-all").click(function () {
-            var all = $("input.select-all")[0];
-            all.checked = !all.checked
-            var checked = all.checked;
-            $("input.select-item").each(function (index,item) {
-                item.checked = checked;
-            });
-        });
-
-        //button select invert
-        $("#select-invert").click(function () {
-            $("input.select-item").each(function (index,item) {
-                item.checked = !item.checked;
-            });
-            checkSelected();
-        });
-
-        //button get selected info
-        $("#selected").click(function () {
-            var items=[];
-            $("input.select-item:checked:checked").each(function (index,item) {
-                items[index] = item.value;
-            });
-            if (items.length < 1) {
-                alert("no selected items!!!");
-            }else {
-                var values = items.join(',');
-                console.log(values);
-                var html = $("<div></div>");
-                html.html("selected:"+values);
-                html.appendTo("body");
-            }
-        });
-
-        //column checkbox select all or cancel
-        $("input.select-all").click(function () {
-            var checked = this.checked;
-            $("input.select-item").each(function (index,item) {
-                item.checked = checked;
-            });
-        });
-
-        //check selected items
-        $("input.select-item").click(function () {
-            var checked = this.checked;
-            console.log(checked);
-            checkSelected();
-        });
-
-        //check is all selected
-        function checkSelected() {
-            var all = $("input.select-all")[0];
-            var total = $("input.select-item").length;
-            var len = $("input.select-item:checked:checked").length;
-            console.log("total:"+total);
-            console.log("len:"+len);
-            all.checked = len===total;
-        }
-    });
-</script>
+  <script src="../../main.js"></script>
+    
 </body>
 </html>

@@ -91,43 +91,681 @@
   <!-- Content -->
   <div class="content-wrapper mt-4">
       <div class="container-fluid">
+
+        <div class="d-flex bd-highlight">
+          <div class="me-auto p-2 bd-highlight">
+                <!-- Filter -->
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active border border-end-0 px-4" style="border-top-left-radius: 12px;
-              border-bottom-left-radius: 12px;" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link border" id="pills-waiting-tab px-4" data-bs-toggle="pill" data-bs-target="#pills-waiting" type="button" role="tab" aria-controls="pills-waiting" aria-selected="false">Waiting</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link border-top border-bottom" id="pills-approved-tab" data-bs-toggle="pill" data-bs-target="#pills-approved" type="button" role="tab" aria-controls="pills-approved" aria-selected="false">Approved</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link border px-4" id="pills-framed-tab" data-bs-toggle="pill" data-bs-target="#pills-framed" type="button" role="tab" aria-controls="pills-framed" aria-selected="false">Framed</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link border-top border-bottom px-4" id="pills-print-tab" data-bs-toggle="pill" data-bs-target="#pills-print" type="button" role="tab" aria-controls="pills-print" aria-selected="false">Print</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link border" style="border-top-right-radius: 12px;
-              border-bottom-right-radius: 12px;" id="pills-digital-tab" data-bs-toggle="pill" data-bs-target="#pills-digital" type="button" role="tab" aria-controls="pills-digital" aria-selected="false">Digital</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">...</div>
-            <div class="tab-pane fade" id="pills-waiting" role="tabpanel" aria-labelledby="pills-waiting-tab">...</div>
-            <div class="tab-pane fade" id="pills-approved" role="tabpanel" aria-labelledby="pills-approved-tab">...</div>
-            <div class="tab-pane fade" id="pills-framed" role="tabpanel" aria-labelledby="pills-framed-tab">...</div>
-            <div class="tab-pane fade" id="pills-print" role="tabpanel" aria-labelledby="pills-print-tab">...</div>
-            <div class="tab-pane fade" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">...</div>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 active border border-end-0 px-4 py-2" style="border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 border py-2" id="pills-waiting-tab px-4 py-2" data-bs-toggle="pill" data-bs-target="#pills-waiting" type="button" role="tab" aria-controls="pills-waiting" aria-selected="false">Waiting</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 border-top border-bottom py-2" id="pills-approved-tab" data-bs-toggle="pill" data-bs-target="#pills-approved" type="button" role="tab" aria-controls="pills-approved" aria-selected="false">Approved</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 border px-4 py-2" id="pills-framed-tab" data-bs-toggle="pill" data-bs-target="#pills-framed" type="button" role="tab" aria-controls="pills-framed" aria-selected="false">Framed</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 border-top border-bottom px-4 py-2" id="pills-print-tab" data-bs-toggle="pill" data-bs-target="#pills-print" type="button" role="tab" aria-controls="pills-print" aria-selected="false">Print</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 border py-2" style="border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;" id="pills-digital-tab" data-bs-toggle="pill" data-bs-target="#pills-digital" type="button" role="tab" aria-controls="pills-digital" aria-selected="false">Digital</button>
+          </li>
+        </ul>
+      <!-- End Filter -->
           </div>
-      </div>
+          <div class="p-1 bd-highlight">
+            <div class="input-group">
+              <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
+              <span class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                      <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                  </button>
+                </span>
+            </div>
+          </div>
+          <div class="p-1 bd-highlight">
+            <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+          <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                </tbody>
+          </table>
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="pills-waiting" role="tabpanel" aria-labelledby="pills-waiting-tab">
+            <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                </tbody>
+          </table>
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="pills-approved" role="tabpanel" aria-labelledby="pills-approved-tab">
+          <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                </tbody>
+          </table>
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="pills-framed" role="tabpanel" aria-labelledby="pills-framed-tab">
+             <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                </tbody>
+          </table>
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="pills-print" role="tabpanel" aria-labelledby="pills-print-tab">
+             <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                </tbody>
+          </table>
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">
+             <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th class="active" scope="col">
+                      <div class="form-check">
+                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
+                    <th style="width: 8%;" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                    <td>
+                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                  <tr class="bg-secondary align-middle">
+                      <th class="active startRow" scope="col">
+                          <div class="form-check">
+                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
+                          </div>
+                        </th>
+                        <td>
+                        <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                    </td>
+                    <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
+                    <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
+                    <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
+                    <td class="endRow">
+                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                  </td>
+                  </tr>
+                  
+                </tbody>
+          </table>
+          <div class="col text-center">
+
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
+        </div>
+    </div>
   </div>
+  
   <!-- End Content -->
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Row</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure want to delete this row?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal Show Image -->
+<div id="modal01" class="modalThumb"  onclick="this.style.display='none'">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modalThumb-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
 
   <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../../main.js"></script>
     
 </body>
 </html>

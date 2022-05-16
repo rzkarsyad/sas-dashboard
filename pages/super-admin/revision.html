@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
-    <title>Super Admin - Waiting Approval</title>
+    <title>Super Admin - Status</title>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
               <a class="nav-link" href="status.html">Status</a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="revision.html">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+              <a class="nav-link active" href="revision.html">Revision <span class="ms-2 text-white badge bg-primary">2</span></a>
             </li>
             <li class="me-2 nav-item">
               <a class="nav-link" href="downloads.html">Downloads</a>
@@ -43,7 +43,7 @@
               <a class="nav-link" href="print.html">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link active" href="waiting-approval.html">Waiting Approval <span class="ms-2 text-white badge bg-primary">70</span></a>
+              <a class="nav-link" href="waiting-approval.html">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
             </li>
           </ul>
                     
@@ -97,14 +97,17 @@
                 <!-- Filter -->
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link text-black-50 active border border-end-0 px-4 py-2" style="border-top-left-radius: 12px;
-            border-bottom-left-radius: 12px;" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+            <button class="nav-link text-black-50 active border border-end-0 px-2 py-2" style="border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;" id="pills-ready-tab" data-bs-toggle="pill" data-bs-target="#pills-ready" type="button" role="tab" aria-controls="pills-ready" aria-selected="true">Ready <span class="ms-2 badge bg-primary">34</span></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link text-black-50 border py-2" id="pills-framed-tab px-4 py-2" data-bs-toggle="pill" data-bs-target="#pills-framed" type="button" role="tab" aria-controls="pills-framed" aria-selected="false">Framed</button>
-          </li>      
+            <button class="nav-link text-black-50 border py-2" id="pills-all-tab px-4 py-2" data-bs-toggle="pill" data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all" aria-selected="false">All</button>
+          </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link text-black-50 border-top border-bottom px-4 py-2" id="pills-print-tab" data-bs-toggle="pill" data-bs-target="#pills-print" type="button" role="tab" aria-controls="pills-print" aria-selected="false">Print</button>
+            <button class="nav-link text-black-50 border-top border-bottom py-2" id="pills-framed-tab" data-bs-toggle="pill" data-bs-target="#pills-framed" type="button" role="tab" aria-controls="pills-framed" aria-selected="false">Framed</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link text-black-50 border border-end-0 px-4 py-2" id="pills-print-tab" data-bs-toggle="pill" data-bs-target="#pills-print" type="button" role="tab" aria-controls="pills-print" aria-selected="false">Print</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link text-black-50 border py-2" style="border-top-right-radius: 12px;
@@ -129,7 +132,7 @@
         </div>
 
         <div class="tab-content" id="pills-tabContent">
-          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+          <div class="tab-pane fade show active" id="pills-ready" role="tabpanel" aria-labelledby="pills-ready-tab">
           <table class="table table-borderless">
               <thead>
                   <tr>
@@ -138,11 +141,14 @@
                           <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
                       </div>
                     </th>
-                    <th style="width: 6%;" scope="col">#</th>
+                    <th scope="col">#</th>
                     <th scope="col">Customer Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Time Elapsed</th>
                     <th scope="col">Type</th>
-                    <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Email Sent</th>
+                    <th scope="col">Status</th>
                     <th style="width: 8%;" scope="col">Action</th>
                   </tr>
                 </thead>
@@ -157,9 +163,12 @@
                       <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
                     <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                    <td>Print Only (No Frame)</td>
                     <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
                     <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
                     <td class="endRow">
                       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
                   </td>
@@ -175,9 +184,12 @@
                         <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
                     <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                    <td>Digital</td>
                     <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
                     <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
                     <td class="endRow">
                       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
                   </td>
@@ -193,9 +205,12 @@
                       <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
                     <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                    <td>Framed</td>
                     <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
                     <td>02-05-2022</td>
+                    <td><span class="badge pill-waiting py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="">Waiting</span></td>
                     <td class="endRow">
                       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
                   </td>
@@ -211,9 +226,12 @@
                         <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                     </td>
                     <td>Devon Lane<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                    <td>Print Only (No Frame)</td>
                     <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
+                    <td>+1 days</td>
+                    <td>Print Only (No Frame)</td>
+                    <td>18-05-2022</td>
                     <td>02-05-2022</td>
+                    <td><span class="badge pill-approved py-2 px-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Approved at 18-05-2022">Approved</span></td>
                     <td class="endRow">
                       <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
                   </td>
@@ -222,146 +240,37 @@
                 </tbody>
           </table>
           <div class="col text-center">
+
             <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
           </div>
           </div>
+          <div class="tab-pane fade" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+           Ini All tab
+          <div class="col text-center">
 
+            <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+          </div>
+          </div>
           <div class="tab-pane fade" id="pills-framed" role="tabpanel" aria-labelledby="pills-framed-tab">
-            <table class="table table-borderless">
-              <thead>
-                  <tr>
-                    <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
-                      </div>
-                    </th>
-                    <th style="width: 6%;" scope="col">#</th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-                  <tr class="bg-secondary align-middle">
-                      <th class="active startRow" scope="col">
-                          <div class="form-check">
-                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                          </div>
-                        </th>
-                    <td>
-                      <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                    </td>
-                    <td>Annette Black<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                    <td>Framed</td>
-                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
-                    <td>02-05-2022</td>
-                    <td class="endRow">
-                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
-                  </td>
-                  </tr>
-                                    
-                </tbody>
-              </table>
+         Ini Framed
           <div class="col text-center">
+
             <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
           </div>
           </div>
-
           <div class="tab-pane fade" id="pills-print" role="tabpanel" aria-labelledby="pills-print-tab">
-            <table class="table table-borderless">
-              <thead>
-                  <tr>
-                    <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
-                      </div>
-                    </th>
-                    <th scope="col">#</th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-
-                    <tr class="bg-secondary align-middle">
-                      <th class="active startRow" scope="col">
-                          <div class="form-check">
-                              <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                          </div>
-                        </th>
-                    <td>
-                      <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                    </td>
-                    <td>Marvin McKinney<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                    <td>Print Only (No Frame)</td>
-                    <td>http://www.toughzap.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
-                    <td>02-05-2022</td>
-                    <td class="endRow">
-                      <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
-                  </td>
-                  </tr>
-                                    
-                </tbody>
-              </table>
+           Ini Print
           <div class="col text-center">
 
             <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
           </div>
-          </div>
-
+        </div>
           <div class="tab-pane fade" id="pills-digital" role="tabpanel" aria-labelledby="pills-digital-tab">
-            <table class="table table-borderless">
-              <thead>
-                  <tr>
-                    <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
-                      </div>
-                    </th>
-                    <th scope="col">#</th>
-                    <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  
-
-                  <tr class="bg-secondary align-middle">
-                    <th class="active startRow" scope="col">
-                        <div class="form-check">
-                            <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                        </div>
-                      </th>
-                      <td>
-                      <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                  </td>
-                  <td>Ronald Richards<button type="button" class="btn btn-sm rounded btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy Customer Name">Copy</button></td>
-                  <td>Digital</td>
-                  <td>http://www.warephase.com<button type="button" class="btn-sm rounded btn btn-outline-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy URL">Copy</button></td>
-                  <td>02-05-2022</td>
-                  <td class="endRow">
-                    <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
-                </td>
-                </tr>
-                                    
-                </tbody>
-              </table>
+            Ini Digital
           <div class="col text-center">
 
             <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
           </div>
-          </div>
-
           </div>
         </div>
     </div>

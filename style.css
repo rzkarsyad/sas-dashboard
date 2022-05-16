@@ -306,3 +306,43 @@ tr .fullRow {
   top: -10px;
   z-index: 2;
 }
+
+.pill-waiting {
+  border-radius: 20px 20px 20px 20px;
+  background-color: #fff9cf;
+  color: #f69b12;
+}
+
+.pill-approved {
+  border-radius: 20px 20px 20px 20px;
+  background-color: #e6fbd9;
+  color: #00ab66;
+}
+
+.btn-del {
+  background-color: #fe753f;
+}
+
+.btn-del:hover {
+  background-color: #e95c25;
+}
+
+.btn-note {
+  font-weight: 500;
+}
+
+.btn-note:hover {
+  color: #9e1516;
+}
+
+.btn-radio-check {
+  color: black;
+}
+
+.btn-complete {
+  color: #00ab66;
+}
+
+.btn-complete:hover {
+  color: white;
+}
