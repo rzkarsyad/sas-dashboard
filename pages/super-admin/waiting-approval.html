@@ -124,7 +124,7 @@
             </div>
           </div>
           <div class="p-1 bd-highlight">
-            <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+            <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteDataWaiting"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
           </div>
         </div>
 
@@ -133,17 +133,17 @@
           <table class="table table-borderless">
               <thead>
                   <tr>
-                    <th class="active" scope="col">
+                    <th  style="width: 3%;" class="active" scope="col">
                       <div class="form-check">
                           <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
                       </div>
                     </th>
                     <th style="width: 6%;" scope="col">#</th>
                     <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
+                    <th style="width: 10%;" scope="col">Type</th>
                     <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
+                    <th style="width: 6%;" scope="col">Sent Date</th>
+                    <th style="width: 5%;" scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -230,17 +230,17 @@
             <table class="table table-borderless">
               <thead>
                   <tr>
-                    <th class="active" scope="col">
+                    <th  style="width: 3%;" class="active" scope="col">
                       <div class="form-check">
                           <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
                       </div>
                     </th>
                     <th style="width: 6%;" scope="col">#</th>
                     <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
+                    <th style="width: 10%;" scope="col">Type</th>
                     <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
+                    <th style="width: 6%;" scope="col">Sent Date</th>
+                    <th style="width: 5%;" scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -274,17 +274,17 @@
             <table class="table table-borderless">
               <thead>
                   <tr>
-                    <th class="active" scope="col">
+                    <th  style="width: 3%;" class="active" scope="col">
                       <div class="form-check">
                           <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
                       </div>
                     </th>
-                    <th scope="col">#</th>
+                    <th style="width: 6%;" scope="col">#</th>
                     <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
+                    <th style="width: 10%;" scope="col">Type</th>
                     <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
+                    <th style="width: 6%;" scope="col">Sent Date</th>
+                    <th style="width: 5%;" scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -320,17 +320,17 @@
             <table class="table table-borderless">
               <thead>
                   <tr>
-                    <th class="active" scope="col">
+                    <th style="width: 3%;" class="active" scope="col">
                       <div class="form-check">
                           <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
                       </div>
                     </th>
-                    <th scope="col">#</th>
+                    <th style="width: 6%;" scope="col">#</th>
                     <th scope="col">Customer Name</th>
-                    <th scope="col">Type</th>
+                    <th style="width: 10%;" scope="col">Type</th>
                     <th scope="col">Download URL</th>
-                    <th scope="col">Sent Date</th>
-                    <th style="width: 8%;" scope="col">Action</th>
+                    <th style="width: 6%;" scope="col">Sent Date</th>
+                    <th style="width: 5%;" scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -368,6 +368,25 @@
   </div>
   
   <!-- End Content -->
+
+    <!-- Modal Delete Waiting-->
+    <div class="modal fade" id="deleteDataWaiting" tabindex="-1" aria-labelledby="deleteDataWaitingLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteDataWaitingLabel">Delete</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure want to delete this <b>data</b>?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

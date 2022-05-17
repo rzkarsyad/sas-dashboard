@@ -1,221 +1,816 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../main.css">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css" />
 
     <title>Super Admin - Settings</title>
 </head>
-<body>
 
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-fluid mt-2">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid mt-2">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="me-2 nav-item">
-              <a class="nav-link" aria-current="page" href="new.html">New  <span class="ms-2 text-black-50  badge bg-secondary">10</span></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" aria-current="page" href="new.html">New
+                <span class="ms-2 text-black-50 badge bg-secondary">10</span></a
+              >
             </li>
             <li class="me-2 nav-item">
               <a class="nav-link px-4" href="all.html">All</a>
-            </li>
-            <li class="me-2 nav-item">
-              <a class="nav-link" href="status.html">Status</a>
-            </li>
-            <li class="me-2 nav-item">
-              <a class="nav-link" href="revision.html">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" href="status.html">Status</a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" href="revision.html">Revision
+                <span class="ms-2 text-black-50 badge bg-secondary">2</span></a
+              >
             </li>
             <li class="me-2 nav-item">
               <a class="nav-link" href="downloads.html">Downloads</a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" href="digital.html">Digital</a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" href="print.html">Ready to Print
+                <span class="ms-2 text-black-50 badge bg-secondary">3</span></a
+              >
             </li>
             <li class="me-2 nav-item">
-              <a class="nav-link" href="digital.html">Digital</a>
-            </li>
-            <li class="me-2 nav-item">
-              <a class="nav-link" href="print.html">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
-            </li>
-            <li class="me-2 nav-item">
-              <a class="nav-link" href="waiting-approval.html">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
+              <a class="nav-link" href="waiting-approval.html"
+                >Waiting Approval
+                <span class="ms-2 text-black-50 badge bg-secondary">70</span></a
+              >
             </li>
           </ul>
-                    
+
           <div class="btn-group">
-            <button type="button" class="btn text-white dropdown-toggle" style="background-color: #4136A4;" data-bs-toggle="dropdown" aria-expanded="false">
-            Admin
+            <button
+              type="button"
+              class="btn text-white dropdown-toggle"
+              style="background-color: #4136a4"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Admin
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><button class="dropdown-item" type="button">VA Dashboard</button></li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  VA Dashboard
+                </button>
+              </li>
             </ul>
           </div>
 
           <div class="btn-group ms-4">
-            <img src="../../img/avatarnav.png" alt="Avatar" class="rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" width="48px">
+            <img
+              src="../../img/avatarnav.png"
+              alt="Avatar"
+              class="rounded-circle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              width="48px"
+            />
             <ul class="dropdown-menu dropdown-menu-end">
               <a class="dropdown-item" href="#">
                 <i class="fas fa-user fa-sm fa-fw mr-2 text-secondary"></i>
                 Profile
-            </a>
-            <a class="dropdown-item" href="#">
-              <i class="fas fa-cogs fa-sm fa-fw mr-2 text-secondary"></i>
-              Settings
-          </a>
-          <a class="dropdown-item" href="#">
-              <i class="fas fa-list fa-sm fa-fw mr-2 text-secondary"></i>
-              Activity Log
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-              Logout
-          </a>
-            </ul>
-          </div>
+              </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-secondary"></i> Settings
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-list fa-sm fa-fw mr-2 text-secondary"></i> Activity Log
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                        </a>
+                </ul>
+            </div>
         </div>
-        
-      </div>
+        </div>
     </nav>
     <!-- End Navbar -->
 
-  <!-- Divider -->
-  <hr class="mt-2 bg-gray border-2 border-top border-gray">
-  <!-- End Divider -->
+    <!-- Divider -->
+    <hr class="mt-2 bg-gray border-2 border-top border-gray" />
+    <!-- End Divider -->
 
-  <!-- Content -->
-  <div class="content-wrapper mt-4">
-      <div class="container-fluid">
-         <!-- Top Bar -->
-         <div class="row">
-          <div class="col-4">
-              <div class="input-group">
-                  <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search Customer" id="example-search-input">
-                  <span class="input-group-append">
-                      <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
-                          <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
-                      </button>
-                      <button class="btn btn-primary ms-3">
-                          <i class="fa-regular fa-plus me-2"></i>Add Artist
-                      </button>
-                  </span>
-                </div>
-          </div> 
-        </div>
-        <!-- End Topbar -->
-        <table class="mt-2 table table-borderless">
-          <thead>
-              <tr>
-                <th class="active" scope="col">
-                  <div class="form-check">
-                      <input class="form-check-input select-all checkbox" type="checkbox" name="select-all">
-                  </div>
-                </th>
-                <th scope="col">#</th>
-                <th scope="col">Customer Name</th>
-                <th scope="col">Download URL</th>
-                <th scope="col">Approval Date</th>
-                <th scope="col">Expiry Date</th>
-                <th style="width: 8%;" scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-secondary align-middle">
-                  <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                      </div>
-                    </th>
-                <td>
-                  <div class="show-image rounded">
-                      <img src="../../img/artwork1.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                        <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                          <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                        </button>
+    <div class="content-wrapper mt-4">
+        <div class="container-fluid">
+
+            <!-- Top Bar -->
+
+            <div class="d-flex bd-highlight">
+                <div class="flex-grow-1 bd-highlight">
+                    <div class="col-md-2">
+                        <div class="input-group">
+                            <input class="form-control border-end-0 border" style="border-radius: 8px" type="search" placeholder="Search" id="example-search-input" />
+                            <span class="input-group-append">
+                <button
+                  class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                  type="button">
+                  <i
+                    class="fa fa-search"
+                    style="color: rgba(128, 128, 128, 0.39)"
+                  ></i>
+                </button>
+              </span>
+                        </div>
                     </div>
-                </td>
-                <td>Marvin McKinney<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                <td>http://www.toughzap.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                <td>02-05-2022</td>
-                <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
-                <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-              </tr>
-                <tr class="bg-secondary align-middle">
-                  <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                      </div>
-                    </th>
-                  <td>
-                      <div class="show-image rounded">
-                          <img src="../../img/artwork2.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
-                        </div>
-                  </td>
-                  <td>Ronald Richards<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>02-05-2022</td>
-                  <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
-                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-              </tr>
-  
-              <tr class="bg-secondary align-middle">
-                  <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                      </div>
-                    </th>
-                  <td>
-                      <div class="show-image rounded">
-                          <img src="../../img/artwork3.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
-                        </div>
-                  </td>
-                  <td>Annette Black<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>http://www.warephase.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>02-05-2022</td>
-                  <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
-                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-              </tr>
-  
-              <tr class="bg-secondary align-middle">
-                  <th class="active" scope="col">
-                      <div class="form-check">
-                          <input class="form-check-input select-item checkbox" type="checkbox" name="select-item">
-                      </div>
-                    </th>
-                  <td>
-                      <div class="show-image rounded">
-                          <img src="../../img/artwork4.jpg" width="32" height="32" class="rounded" alt="Pictures">
-                            <button data-bs-toggle="modal" data-bs-target="#delImageModal" class="delete btn btn-sm">
-                              <i class="fa-regular fa-trash-can text-white py-2 px-2"></i>
-                            </button>
-                        </div>
-                  </td>
-                  <td>Devon Lane<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>http://www.unso.com<button type="button" class="btn-sm btn btn-outline-primary float-end">Copy</button></td>
-                  <td>02-05-2022</td>
-                  <td>02-05-2023<i class="ms-3 fa-solid fa-arrows-rotate"></i></td>
-                  <td><div class="col-md-8 text-center"><i class="fa-regular fa-trash-can me-2"></i></div></td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-  </div>
-  <!-- End Content -->
+                </div>
+                <div class="p-2 bd-highlight">
+                    <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#addArtist">
+            <i class="fa-regular fa-plus me-2"></i>Add Artist
+          </button>
+                </div>
+            </div>
 
-  <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+            <!-- End Topbar -->
+
+            <table class="mt-2 table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Username</th>
+                        <th style="width: 18%;" scope="col">Revisions</th>
+                        <th style="width: 18%;" scope="col">Pets</th>
+                        <th style="width: 18%;" scope="col">Faceless</th>
+                        <th style="width: 18%;" scope="col">Classic</th>
+                        <th style="width: 7%;" scope="col">Multi-colour</th>
+                        <th style="width: 8%;" scope="col">Count</th>
+                        <th style="width: 8%;" scope="col">Total Cost</th>
+                        <th scope="col">Status</th>
+                        <th style="width: 6%" scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1 -->
+                    <tr class="bg-secondary align-middle">
+                        <td class="startRow">
+                            <div class="form-check form-switch form-switch-md form-check-inline ms-2">
+                                <input class="form-check-input mt-3" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                        </td>
+                        <td>4342dsds</td>
+                        <td>VA Admin</td>
+                        <!-- Revisions -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="revision-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="revision-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Pets -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="pets-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="pets-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Faceless -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="faceless-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="faceless-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Classic -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="classic-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="classic-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Multi Colour -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="multi-colour">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Count -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight">
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Total cost -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight">
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="total_cost" value="$50">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Statu -->
+                        <td><span class="badge pill-approved py-2 px-2">Pay Sent</span></td>
+
+                        <!-- Action -->
+                        <td class="endRow">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                        </td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr class="bg-secondary align-middle">
+                        <td class="startRow">
+                            <div class="form-check form-switch form-switch-md form-check-inline ms-2">
+                                <input class="form-check-input mt-3" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                            </div>
+                        </td>
+                        <td>4342dsds</td>
+                        <td>VA Admin</td>
+                        <!-- Revisions -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="revision-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="revision-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Pets -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="pets-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="pets-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Faceless -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="faceless-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="faceless-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Classic -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    </div>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="classic-price" value="$2.5">
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="classic-count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Multi Colour -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight mt-2">
+                                <div class="p-2 bd-highlight mt-1">
+                                    <div class="form-check form-switch form-switch-md form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="multi-colour">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Count -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight">
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="count" value="16">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Total cost -->
+                        <td>
+                            <div class="d-flex flex-row bd-highlight">
+                                <div class="p-2 bd-highlight">
+                                    <input type="text" class="form-control text-center" id="total_cost" value="$50">
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Statu -->
+                        <td><span class="badge pill-approved py-2 px-2">Pay Sent</span></td>
+
+                        <!-- Action -->
+                        <td class="endRow">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#deleteModal" class="ms-3"><i class="fa-regular fa-trash-can me-2" style="color: #667085;"></i></i></a>
+                        </td>
+                    </tr>
+
+                    <!-- 2nd Table -->
+                    <table class="mt-2 table table-borderless">
+                        <thead>
+                            <tr>
+                                <th style="width: 10%;" scope="col">Payment Log</th>
+                                <th style="width: 10%;" scope="col">Pets</th>
+                                <th style="width: 10%;" scope="col">Faceless</th>
+                                <th style="width: 10%;" scope="col">Classic</th>
+                                <th style="width: 10%;" scope="col">Ugly</th>
+                                <th style="width: 10%;" scope="col">Line</th>
+                                <th style="width: 10%;" scope="col">Multi-colour</th>
+                                <th style="width: 6%;" scope="col">Count</th>
+                                <th style="width: 6%;" scope="col">Total Cost</th>
+                                <th style="width: 10%;" scope="col">Payment Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1 -->
+                            <tr class="bg-secondary align-middle">
+                                <!-- Payment Log -->
+                                <td class="startRow">Artist 1</td>
+
+                                <!-- Pets -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight mt-2">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="pets-price" value="$2.5">
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="pets-count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Faceless -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight mt-2">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="faceless-price" value="$2.5">
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="faceless-count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Classic -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight mt-2">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="classic-price" value="$2.5">
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="classic-count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Ugly -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight mt-2">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="ugly-price" value="$2.5">
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="ugly-count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Line -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight mt-2">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="line-price" value="$2.5">
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="line-count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Multi Colour -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight mt-2">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="multi-colour-price" value="$2.5">
+                                        </div>
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="multi-colour-count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Count -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="count" value="16">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Total cost -->
+                                <td>
+                                    <div class="d-flex flex-row bd-highlight">
+                                        <div class="p-2 bd-highlight">
+                                            <input type="text" class="form-control text-center" id="total_cost" value="$50">
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <!-- Payment Date -->
+                                <td>09-05-2022</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Add Artist-->
+    <div class="modal fade" id="addArtist" tabindex="-1" aria-labelledby="addArtistLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addArtistLabel">New Artist</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Pets</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Style</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Type</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Size</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >BG</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Pictures</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple />
+                    </div>
+                    <div class="col mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Poster Name</label
+              >
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Edit Artist-->
+    <div
+      class="modal fade"
+      id="editArtist"
+      tabindex="-1"
+      aria-labelledby="editArtistLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editArtistLabel">Edit Artist</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Pets</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Style</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Type</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Size</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >BG</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="col mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Poster Name</label
+              >
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Add Pictures -->
+    <div
+      class="modal fade"
+      id="uploadPict"
+      tabindex="-1"
+      aria-labelledby="uploadPict"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uploadPict">Upload New Picture</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Pictures</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteArtistModalLabel">
+                        Delete Artist
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure want to delete <b>Artist Name</b>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete Image -->
+    <div class="modal fade" id="delImageModal" tabindex="-1" aria-labelledby="delImageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delImageModalLabel">Delete Picture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure want to delete this picture?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Cancel
+            </button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal Show Image -->
+    <div id="modal01" class="modalThumb" onclick="this.style.display='none'">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modalThumb-content" id="img01" />
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+    <!-- Modal Delete Row -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Row</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure want to delete this row?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../main.js"></script>
 </body>
+
 </html>

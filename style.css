@@ -319,6 +319,19 @@ tr .fullRow {
   color: #00ab66;
 }
 
+.pill-submit {
+  border-radius: 20px 20px 20px 20px;
+  background-color: #91e3c2;
+  color: #5aa788;
+}
+
+.pill-secondary {
+  font-weight: 500;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #c4c4c4;
+  color: #6b7280;
+}
+
 .btn-del {
   background-color: #fe753f;
 }
@@ -328,11 +341,14 @@ tr .fullRow {
 }
 
 .btn-note {
+  color: #9e1516;
   font-weight: 500;
 }
 
 .btn-note:hover {
   color: #9e1516;
+  font-weight: 500;
+  background: #f5e8e8;
 }
 
 .btn-radio-check {
@@ -345,4 +361,44 @@ tr .fullRow {
 
 .btn-complete:hover {
   color: white;
+}
+
+.btn-upload {
+  font-weight: 500;
+  color: #528dac;
+  background-color: #c5e6f9;
+}
+
+.btn-upload:hover {
+  font-weight: 500;
+  color: #528dac;
+  background-color: #b1daf2;
+}
+
+.btn-show-revision {
+  font-weight: 500;
+}
+
+.btn-upload-disabled {
+  color: white;
+  background-color: #c4c4c4;
+}
+
+.btn-danger {
+  color: white;
+}
+
+.btn-danger:hover {
+  color: white;
+  background-color: #dc3545;
+}
+
+.btn-danger:focus {
+  color: white;
+  background-color: #dc3545;
+}
+
+.btn-upload-disabled:hover {
+  color: white;
+  background-color: #aeaeae;
 }

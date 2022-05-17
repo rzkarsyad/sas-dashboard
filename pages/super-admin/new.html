@@ -159,7 +159,7 @@
                     <th style="width: 35%;" scope="col">Pictures</th>
                     <th style="width: 8%;"scope="col">Poster Name</th>
                     <th style="width: 7%;" scope="col">Notes</th>
-                    <th style="width: 5%;" scope="col">Action</th>
+                    <th style="width: 8%;" scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -251,10 +251,10 @@
                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.">
                       <i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td class="endRow star">
-                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                      <input type="checkbox" id="st1" value="1" />
-                      <label class="star-sm" for="st1"></label>    
+                   <td class="endRow star">
+                      <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st1" value="1" checked/>
+                      <label class="star-sm btn" for="st1"></label>    
                   </td>
                   </tr>
 
@@ -345,10 +345,10 @@
                       <button type="button" class="btn btn-secondary btn-note"data-bs-toggle="tooltip" data-bs-placement="top"
                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td class="endRow star">
-                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                      <input type="checkbox" id="st1" value="1" />
-                      <label class="star-sm" for="st1"></label>    
+                   <td class="endRow star">
+                      <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st2" value="1"/>
+                      <label class="star-sm btn" for="st2"></label>    
                   </td>
                   </tr>
 
@@ -439,10 +439,10 @@
                       <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top"
                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td class="endRow star">
-                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                      <input type="checkbox" id="st1" value="1" />
-                      <label class="star-sm" for="st1"></label>    
+                   <td class="endRow star">
+                      <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st3" value="1"/>
+                      <label class="star-sm btn" for="st3"></label>    
                   </td>
                   </tr>
 
@@ -533,10 +533,10 @@
                       <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top"
                       title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                     </td>
-                    <td class="endRow star">
-                      <a href="" class="me-3"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                      <input type="checkbox" id="st1" value="1" />
-                      <label class="star-sm" for="st1"></label>    
+                   <td class="endRow star">
+                      <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
+                      <input type="checkbox" id="st4" value="1"/>
+                      <label class="star-sm btn" for="st4"></label>    
                   </td>
                   </tr>
                 </tbody>
@@ -592,6 +592,60 @@
             <div class="mb-3">
               <label for="formFileMultiple" class="form-label">Pictures</label>
               <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            <div class="col mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Poster Name</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Modal Edit Artist-->
+     <div class="modal fade" id="editArtist" tabindex="-1" aria-labelledby="editArtistLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editArtistLabel">Edit Artist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Name</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1">
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Pets</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Style</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Type</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Size</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="col mb-3">
+                <label for="exampleFormControlInput1" class="form-label">BG</label>
+                <input type="text" class="form-control">
+              </div>
             </div>
             <div class="col mb-3">
               <label for="exampleFormControlInput1" class="form-label">Poster Name</label>
