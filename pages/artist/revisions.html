@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../main.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/bootstrap/dist/css/component-custom-switch.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../node_modules/@flaticon/css/uicons-regular-rounded.css"
+    />
+
+    <title>Artist - Revisions</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="tab-bar">
+      <div class="tab-bar-group">
+        <a class="tab" href="/pages/artist/index.html">
+          <p class="tab-name">Orders</p>
+          <div class="tab-number">8</div>
+        </a>
+        <a class="tab active" href="/pages/artist/revisions.html">
+          <p class="tab-name">Revision</p>
+          <div class="tab-number">2</div>
+        </a>
+      </div>
+      <div class="tab-label">
+        <p class="label-name">Completed</p>
+        <div class="label-number">1</div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Content -->
+    <div class="content-wrapper mt-4">
+      <div class="container-fluid">
+        <!-- Top Bar -->
+          <div class="search-input-container">
+            <div class="input-group">
+              <input
+                class="form-control border-end-0 border"
+                style="border-radius: 8px"
+                type="search"
+                placeholder="Search"
+                id="example-search-input"
+              />
+              <span class="input-group-append">
+                <button
+                  class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                  type="button"
+                >
+                  <i
+                    class="fa fa-search"
+                    style="color: rgba(128, 128, 128, 0.39)"
+                  ></i>
+                </button>
+              </span>
+            </div>
+          </div>
+        <!-- End Topbar -->
+        <table class="table table-borderless expandable-table mt-4">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th style="width: 6%" scope="col">Pictures</th>
+              <th scope="col">Revision Notes</th>
+              <th style="width: 12%" scope="col">Upload</th>
+              <th style="width: 12%" scope="col">Submit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="row-1">
+              <td class="table-row-header">
+                <div class="row-header-flex">
+                  <div class="name">
+                    3456 - 1 - john smith
+                    <button
+                      class="btn"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Copy Name"
+                    >
+                      <i class="fa fa-copy text-primary"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="btn pill-submit" style="font-weight: 500"
+                      >Submit</span
+                    >
+                    <div class="toggle-expand-table" data-target="#row-1">
+                      <i class="fa fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="startRow">
+                3456 - 1 - john smith
+                <button
+                  type="button"
+                  class="btn btn-sm rounded btn-outline-primary float-end"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Copy Name"
+                >
+                  Copy
+                </button>
+              </td>
+
+              <td class="expandable-cell">
+                <span class="row-label">Pictures</span>
+
+                <img
+                  src="../../img/artwork1.jpg"
+                  width="48"
+                  height="48"
+                  class="modal-hover-opacity rounded mb-2"
+                  id="pict"
+                  onclick="onClick(this)"
+                  alt="Artist Name"
+                />
+              </td>
+              <td class="expandable-cell">
+                <span class="row-label">Revision Notes</span>
+                Make eyes green
+              </td>
+              <td class="expandable-cell">
+                <span class="row-label">Upload</span>
+
+                <button class="btn btn-upload">
+                  <i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload
+                </button>
+              </td>
+              <td class="endRow">
+                <span class="btn pill-submit" style="font-weight: 500"
+                  >Submit</span
+                >
+              </td>
+            </tr>
+            <tr id="row-2">
+              <td class="table-row-header">
+                <div class="row-header-flex">
+                  <div class="name">
+                    3456 - 2 - john smith
+                    <button
+                      class="btn"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Copy Name"
+                    >
+                      <i class="fa fa-copy text-primary"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="btn pill-secondary" style="font-weight: 500"
+                      >Done</span
+                    >
+                    <div class="toggle-expand-table" data-target="#row-2">
+                      <i class="fa fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="startRow">
+                3456 - 2 - john smith
+                <button
+                  type="button"
+                  class="btn btn-sm rounded btn-outline-primary float-end"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Copy Name"
+                >
+                  Copy
+                </button>
+              </td>
+
+              <td class="expandable-cell">
+                <span class="row-label">Pictures</span>
+
+                <img
+                  src="../../img/artwork2.jpg"
+                  width="48"
+                  height="48"
+                  class="modal-hover-opacity rounded mb-2"
+                  id="pict"
+                  onclick="onClick(this)"
+                  alt="Artist Name"
+                />
+              </td>
+              <td class="expandable-cell">
+                <span class="row-label">Revision Notes</span>
+                1) Change color to brown
+              </td>
+              <td class="expandable-cell">
+                <span class="row-label">Upload</span>
+
+                <button class="btn btn-upload">
+                  <i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload
+                </button>
+              </td>
+              <td class="endRow">
+                <span class="btn pill-secondary" style="font-weight: 500"
+                  >Done</span
+                >
+              </td>
+            </tr>
+            <tr id="row-2">
+              <td class="table-row-header">
+                <div class="row-header-flex">
+                  <div class="name">
+                    3456 - 3 - john smith
+                    <button
+                      class="btn"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Copy Name"
+                    >
+                      <i class="fa fa-copy text-primary"></i>
+                    </button>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="btn pill-secondary" style="font-weight: 500"
+                      >Done</span
+                    >
+                    <div class="toggle-expand-table" data-target="#row-2">
+                      <i class="fa fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td class="startRow">
+                3456 - 3 - john smith
+                <button
+                  type="button"
+                  class="btn btn-sm rounded btn-outline-primary float-end"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Copy Name"
+                >
+                  Copy
+                </button>
+              </td>
+
+              <td class="expandable-cell">
+                <span class="row-label">Pictures</span>
+
+                <img
+                  src="../../img/artwork3.jpg"
+                  width="48"
+                  height="48"
+                  class="modal-hover-opacity rounded mb-2"
+                  id="pict"
+                  onclick="onClick(this)"
+                  alt="Artist Name"
+                />
+              </td>
+              <td class="expandable-cell">
+                <span class="row-label">Revision Notes</span>
+                Remove Collar
+              </td>
+              <td class="expandable-cell">
+                <span class="row-label">Upload</span>
+
+                <button class="btn btn-upload">
+                  <i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload
+                </button>
+              </td>
+              <td class="endRow">
+                <span class="btn pill-secondary" style="font-weight: 500"
+                  >Done</span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="col text-center">
+          <button class="btn btn-secondary border btn-text">
+            View More <i class="ms-1 fa-solid fa-angle-down"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Modal Add Pictures -->
+    <div
+      class="modal fade"
+      id="uploadPict"
+      tabindex="-1"
+      aria-labelledby="uploadPict"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uploadPict">Upload New Picture</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Pictures</label>
+              <input
+                class="form-control"
+                type="file"
+                id="formFileMultiple"
+                multiple
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div
+      class="modal fade"
+      id="deleteArtistModal"
+      tabindex="-1"
+      aria-labelledby="deleteArtistModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteArtistModalLabel">
+              Delete Artist
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Are you sure want to delete <b>Artist Name</b>?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-danger">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div
+      class="modal fade"
+      id="delImageModal"
+      tabindex="-1"
+      aria-labelledby="delImageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="delImageModalLabel">Delete Picture</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Are you sure want to delete this picture?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-danger">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal Show Image -->
+    <div id="modal01" class="modalThumb" onclick="this.style.display='none'">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modalThumb-content" id="img01" />
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../main.js"></script>
+  </body>
+</html>

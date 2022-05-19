@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/component-custom-switch.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+    <title>VA - Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid mt-2">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" aria-current="page" href="/pages/va-dashboard/index.html">Poster  <span class="ms-2  text-black-50 badge bg-secondary">8</span></a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link active" href="/pages/va-dashboard/faceless.html">Faceless<span class="ms-2 text-white badge bg-primary">34</span></a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" href="/pages/va-dashboard/classic.html">Classic<span class="ms-2 text-black-50 badge bg-secondary">34</span></a>
+                    </li>
+                    <li class="me-2 nav-item">
+                        <a class="nav-link" href="/pages/va-dashboard/revisions.html">Revisions<span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
+                    </li>
+                </ul>
+
+                <div class="btn-group">
+                    <button type="button" class="btn text-white dropdown-toggle" style="background-color: #4136A4;" data-bs-toggle="dropdown" aria-expanded="false">
+            VA Dashboard
+            </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><button class="dropdown-item" type="button">Admin</button></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group ms-4">
+                    <img src="../../img/avatarnav.png" alt="Avatar" class="rounded-circle" data-bs-toggle="dropdown" aria-expanded="false" width="48px">
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-user fa-sm fa-fw mr-2 text-secondary"></i> Profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-secondary"></i> Settings
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fas fa-list fa-sm fa-fw mr-2 text-secondary"></i> Activity Log
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Divider -->
+    <hr class="mt-2 bg-gray border-2 border-top border-gray">
+    <!-- End Divider -->
+
+    <!-- Content -->
+    <div class="content-wrapper mt-4">
+        <div class="container-fluid">
+
+            <!-- Top Bar -->
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="input-group">
+                        <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
+                        <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                        <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
+                    </button>
+                </span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Topbar -->
+
+            <table class="mt-2 table table-borderless">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;" scope="col">Name</th>
+                        <th scope="col">Figures</th>
+                        <th scope="col">RAW Pictures</th>
+                        <th scope="col">Size</th>
+                        <th style="width: 5%;" scope="col">BG Colour</th>
+                        <th style="width: 40%;" scope="col">Notes</th>
+                        <th style="width: 8%;" scope="col">Upload</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-secondary align-middle">
+                        <td class="startRow">Marvin McKinney</td>
+                        <td>3</td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+                        </td>
+                        <td>8x10-Daisy</td>
+                        <td>#0000FF</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.
+                        </td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-submit py-2 px-4" style="font-weight: 500;">Submit</span></td>
+                    </tr>
+
+                    <tr class="bg-secondary align-middle">
+                        <td class="startRow">Ronald Richards</td>
+                        <td>3</td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                        </td>
+                        <td>8x10-Daisy</td>
+                        <td>White</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.
+                        </td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-secondary py-2 px-4" style="font-weight: 500;">Submit</span></td>
+                    </tr>
+
+                    <tr class="bg-secondary align-middle">
+                        <td class="startRow">Annette Black</td>
+                        <td>5</td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                        </td>
+                        <td>24x36-White</td>
+                        <td>Blue</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.
+                        </td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-secondary py-2 px-4" style="font-weight: 500;">Submit</span></td>
+                    </tr>
+
+                    <tr class="bg-secondary align-middle">
+                        <td class="startRow">Devon Lane</td>
+                        <td>2</td>
+                        <td>
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+                        </td>
+                        <td>12x16-Pale-Leaf</td>
+                        <td>Black</td>
+                        <td>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.
+                        </td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-secondary py-2 px-4" style="font-weight: 500;">Submit</span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="col text-center">
+
+                <button class="btn btn-secondary border btn-text">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+
+    <!-- Modal Add Pictures -->
+    <div class="modal fade" id="uploadPict" tabindex="-1" aria-labelledby="uploadPict" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uploadPict">Upload New Picture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label">Pictures</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteArtistModalLabel">Delete Artist</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure want to delete <b>Artist Name</b>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div class="modal fade" id="delImageModal" tabindex="-1" aria-labelledby="delImageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="delImageModalLabel">Delete Picture</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure want to delete this picture?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal Show Image -->
+    <div id="modal01" class="modalThumb" onclick="this.style.display='none'">
+
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modalThumb-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../main.js"></script>
+
+</body>
+
+</html>

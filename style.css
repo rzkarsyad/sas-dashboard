@@ -323,15 +323,25 @@ tr .fullRow {
   border-radius: 20px 20px 20px 20px;
   background-color: #91e3c2;
   color: #5aa788;
+  font-size: 12px;
+  padding: 4px 12px;
+  height: fit-content;
 }
 
 .pill-secondary {
   font-weight: 500;
   border-radius: 20px 20px 20px 20px;
   background-color: #c4c4c4;
-  color: #6b7280;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 12px;
 }
-
+@media screen and (min-width: 768px) {
+  .pill-submit, .pill-secondary {
+    padding: 0.375rem 0.75rem;
+    font-size: 16px;
+  }
+}
 .btn-del {
   background-color: #fe753f;
 }

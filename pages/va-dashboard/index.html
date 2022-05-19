@@ -8,9 +8,10 @@
 
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/component-custom-switch.css">
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
-    <title>Super Admin - New</title>
+    <title>VA - Dashboard</title>
 </head>
 
 <body>
@@ -19,42 +20,30 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid mt-2">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="me-2 nav-item">
-                        <a class="nav-link active" aria-current="page" href="new.html">New  <span class="ms-2 text-white badge bg-primary">10</span></a>
+                        <a class="nav-link active" aria-current="page" href="/pages/va-dashboard/index.html">Poster  <span class="ms-2 text-white badge bg-primary">8</span></a>
                     </li>
                     <li class="me-2 nav-item">
-                        <a class="nav-link px-4" href="all.html">All</a>
+                        <a class="nav-link" href="/pages/va-dashboard/faceless.html">Faceless<span class="ms-2 text-black-50 badge bg-secondary">34</span></a>
                     </li>
                     <li class="me-2 nav-item">
-                        <a class="nav-link" href="status.html">Status</a>
+                        <a class="nav-link" href="/pages/va-dashboard/classic.html">Classic<span class="ms-2 text-black-50 badge bg-secondary">34</span></a>
                     </li>
                     <li class="me-2 nav-item">
-                        <a class="nav-link" href="revision.html">Revision <span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
-                    </li>
-                    <li class="me-2 nav-item">
-                        <a class="nav-link" href="downloads.html">Downloads</a>
-                    </li>
-                    <li class="me-2 nav-item">
-                        <a class="nav-link" href="digital.html">Digital</a>
-                    </li>
-                    <li class="me-2 nav-item">
-                        <a class="nav-link" href="print.html">Ready to Print <span class="ms-2 text-black-50 badge bg-secondary">3</span></a>
-                    </li>
-                    <li class="me-2 nav-item">
-                        <a class="nav-link" href="waiting-approval.html">Waiting Approval <span class="ms-2 text-black-50 badge bg-secondary">70</span></a>
+                        <a class="nav-link" href="/pages/va-dashboard/revisions.html">Revisions<span class="ms-2 text-black-50 badge bg-secondary">2</span></a>
                     </li>
                 </ul>
 
                 <div class="btn-group">
                     <button type="button" class="btn text-white dropdown-toggle" style="background-color: #4136A4;" data-bs-toggle="dropdown" aria-expanded="false">
-              Admin
-              </button>
+            VA Dashboard
+            </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><button class="dropdown-item" type="button">VA Dashboard</button></li>
+                        <li><button class="dropdown-item" type="button">Admin</button></li>
                     </ul>
                 </div>
 
@@ -86,6 +75,7 @@
     <hr class="mt-2 bg-gray border-2 border-top border-gray">
     <!-- End Divider -->
 
+    <!-- Content -->
     <div class="content-wrapper mt-4">
         <div class="container-fluid">
 
@@ -95,45 +85,11 @@
                     <div class="input-group">
                         <input class="form-control border-end-0 border" style="border-radius: 8px;" type="search" placeholder="Search" id="example-search-input">
                         <span class="input-group-append">
-                      <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
-                          <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
-                      </button>
-                  </span>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <input type="radio" class="btn-check" name="options-outlined" id="new-outlined" autocomplete="off" checked>
-                    <label class="btn btn-outline-secondary border btn-radio-check" for="new-outlined">New</label>
-
-                    <input type="radio" class="btn-check" name="options-outlined" id="all-outlined" autocomplete="off">
-                    <label class="btn btn-outline-secondary border btn-radio-check px-3 ms-1" for="all-outlined">All</label>
-
-                    <button class="ms-1 btn dropdown-toggle" type="button" style="background-color: #C5E6F9; color: #528DAC;" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      Pick Artist
-                  </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 text-end">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Digital</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Print</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox3">Framed</label>
-                    </div>
-                    <button class="btn btn-del text-white" data-bs-toggle="modal" data-bs-target="#deleteArtistModal"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
-                    <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#addArtist"><i class="fa-regular fa-plus me-2"></i>Add Artist</button>
-
+                    <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+                        <i class="fa fa-search" style="color: rgba(128, 128, 128, 0.39);"></i>
                     </button>
+                </span>
+                    </div>
                 </div>
             </div>
             <!-- End Topbar -->
@@ -141,44 +97,25 @@
             <table class="mt-2 table table-borderless">
                 <thead>
                     <tr>
-                        <th scope="col">
-                            <div class="form-check">
-                                <input class="form-check-input select-all" type="checkbox" value="" id="flexCheckChecked" name="select-all">
-                            </div>
-                        </th>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Pets</th>
-                        <th scope="col">Style</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Size</th>
-                        <th scope="col">BG</th>
-                        <th style="width: 35%;" scope="col">Pictures</th>
+                        <th style="width: 7%;" scope="col">Name</th>
+                        <th style="width: 3%;" scope="col">Pets</th>
+                        <th style="width: 30%;" scope="col">RAW Pictures</th>
+                        <th style="width: 30%;" scope="col">Artwork</th>
                         <th style="width: 8%;" scope="col">Poster Name</th>
-                        <th style="width: 7%;" scope="col">Notes</th>
-                        <th style="width: 8%;" scope="col">Action</th>
+                        <th style="width: 6%;" scope="col">Notes</th>
+                        <th style="width: 6%;" scope="col">Size</th>
+                        <th style="width: 3%;" scope="col">Colour</th>
+                        <th style="width: 12%;" scope="col">Upload</th>
+                        <th style="width: 6%;" scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Row 1 -->
                     <tr class="bg-secondary align-middle">
-                        <th class="startRow" scope="row">
-                            <div class="form-check">
-                                <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
-                            </div>
-                        </th>
-                        <td>1008</td>
-                        <td>Marvin McKinney</td>
-                        <td>sara.cruz@example.com</td>
+                        <td class="startRow">Marvin McKinney</td>
                         <td>4</td>
-                        <td>Modern</td>
-                        <td>Digital File</td>
-                        <td>8x10</td>
-                        <td>Daisy</td>
                         <td>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -187,7 +124,7 @@
                                 <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -196,7 +133,7 @@
                                 <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -205,7 +142,7 @@
                                 <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -214,7 +151,7 @@
                                 <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -223,7 +160,7 @@
                                 <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -232,7 +169,74 @@
                                 <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                        </td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -248,31 +252,18 @@
                             <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.">
                       <i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                         </td>
-                        <td class="endRow star">
-                            <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                            <input type="checkbox" id="st1" value="1" checked/>
-                            <label class="star-sm btn" for="st1"></label>
-                        </td>
+                        <td>8x10-Daisy</td>
+                        <td>Black</td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-submit py-2 px-4" style="font-weight: 500;">Submit</span></td>
                     </tr>
 
-                    <!-- Row 2 -->
                     <tr class="bg-secondary align-middle">
-                        <th class="startRow" scope="row">
-                            <div class="form-check">
-                                <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
-                            </div>
-                        </th>
-                        <td>1009</td>
-                        <td>Ronald Richards</td>
-                        <td>jessica.hanson@example.com</td>
+                        <td class="startRow">Ronald Richards</td>
                         <td>3</td>
-                        <td>Line Art</td>
-                        <td>Digital File</td>
-                        <td>8x10</td>
-                        <td>Daisy</td>
                         <td>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -281,7 +272,7 @@
                                 <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -290,7 +281,7 @@
                                 <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -299,7 +290,7 @@
                                 <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -308,64 +299,65 @@
                                 <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                        </td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                            </div>
+
+                            <div class="image mt-2 mb-2 me-3">
+                                <div class="overlay">
+                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
+                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
+                                    </a>
+                                </div>
+                                <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
                             <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
                         </td>
                         <td>Lou</td>
                         <td>
-                            <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                            <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris.">
+                      <i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                         </td>
-                        <td class="endRow star">
-                            <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                            <input type="checkbox" id="st2" value="1" />
-                            <label class="star-sm btn" for="st2"></label>
-                        </td>
+                        <td>8x10-Daisy</td>
+                        <td>White</td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-secondary py-2 px-4" style="font-weight: 500;">Submit</span></td>
                     </tr>
 
-                    <!-- Row 3 -->
                     <tr class="bg-secondary align-middle">
-                        <th class="startRow" scope="row">
-                            <div class="form-check">
-                                <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
-                            </div>
-                        </th>
-                        <td>1010</td>
-                        <td>Annette Black</td>
-                        <td>alma.lawson@example.com</td>
+                        <td class="startRow">Annette Black</td>
                         <td>5</td>
-                        <td>Modern</td>
-                        <td>Digital File</td>
-                        <td>24x36</td>
-                        <td>Daisy</td>
                         <td>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -374,7 +366,7 @@
                                 <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -383,7 +375,7 @@
                                 <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -392,73 +384,59 @@
                                 <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+
+
+                            <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                        </td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
-                                <div class="overlay">
-                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
-                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
-                                    </a>
-                                </div>
-                                <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                            </div>
+
 
                             <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
                         </td>
                         <td>Coco & Walt</td>
                         <td>
-                            <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                            <button type="button" class="btn btn-secondary btn-notes" data-bs-toggle="modal" data-bs-target="#notesModal"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                         </td>
-                        <td class="endRow star">
-                            <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                            <input type="checkbox" id="st3" value="1" />
-                            <label class="star-sm btn" for="st3"></label>
-                        </td>
+                        <td>24x36-White</td>
+                        <td>Green</td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-secondary py-2 px-4" style="font-weight: 500;">Submit</span></td>
                     </tr>
 
-                    <!-- Row 4 -->
                     <tr class="bg-secondary align-middle">
-                        <th class="startRow" scope="row">
-                            <div class="form-check">
-                                <input class="form-check-input select-item" type="checkbox" value="" id="flexCheckChecked" name="select-item">
-                            </div>
-                        </th>
-                        <td>1011</td>
-                        <td>Devon Lane</td>
-                        <td>kenzi.lawson@example.com</td>
+                        <td class="startRow">Devon Lane</td>
                         <td>2</td>
-                        <td>Line Art</td>
-                        <td>Digital File</td>
-                        <td>12x16</td>
-                        <td>Pale Leaf</td>
                         <td>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -467,7 +445,7 @@
                                 <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
@@ -476,183 +454,51 @@
                                 <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+
+                            <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
+                        </td>
+                        <td>
+
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork3.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork1.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
+                            <div class="image mt-2 mb-2 me-3">
                                 <div class="overlay">
                                     <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
                                         <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
                                     </a>
                                 </div>
-                                <img src="../../img/artwork4.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
+                                <img src="../../img/artwork2.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
                             </div>
 
-                            <div class="image mt-2 me-3">
-                                <div class="overlay">
-                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
-                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
-                                    </a>
-                                </div>
-                                <img src="../../img/artwork5.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                            </div>
-
-                            <div class="image mt-2 me-3">
-                                <div class="overlay">
-                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
-                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
-                                    </a>
-                                </div>
-                                <img src="../../img/artwork6.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                            </div>
-
-                            <div class="image mt-2 me-3">
-                                <div class="overlay">
-                                    <a href="#delImageModal" class="edit-image-btn pull-right" data-bs-toggle="modal" data-bs-target="#delImageModal">
-                                        <span><i class="fa-solid fa-circle-xmark fa-lg bg-white py-2 rounded-circle" style="color: #F12B2C;"></i></span>
-                                    </a>
-                                </div>
-                                <img src="../../img/artwork7.jpg" width="48" height="48" class="modal-hover-opacity rounded mb-2" id="pict" onclick="onClick(this)" alt="Artist Name">
-                            </div>
 
                             <button class="btn rounded ms-1 mb-2" data-bs-toggle="modal" data-bs-target="#uploadPict" style="background-color: #EBEEFF;"><i class="fa-solid fa-plus text-primary"></i></button>
                         </td>
                         <td>Sam</td>
                         <td>
-                            <button type="button" class="btn btn-secondary btn-note" data-bs-toggle="tooltip" data-bs-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dictum arcu. Praesent a erat ac nulla vulputate convallis id eu mauris."><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
+                            <button type="button" class="btn btn-secondary btn-notes" data-bs-toggle="modal" data-bs-target="#notesModal"><i class="fa-regular fa-note-sticky me-2"></i>Note</button>
                         </td>
-                        <td class="endRow star">
-                            <a href="" class="btn" data-bs-toggle="modal" data-bs-target="#editArtist"><i class="fa-solid fa-pencil" style="color: #667085;"></i></a>
-                            <input type="checkbox" id="st4" value="1" />
-                            <label class="star-sm btn" for="st4"></label>
-                        </td>
+                        <td>12x16-Pale-Leaf</td>
+                        <td>Blue</td>
+                        <td> <button class="btn btn-upload"><i class="fa-solid fa-arrow-up-from-bracket me-2"></i>Upload</button></td>
+                        <td class="endRow"><span class="btn btn-sm pill-secondary py-2 px-4" style="font-weight: 500;">Submit</span></td>
                     </tr>
+
                 </tbody>
             </table>
-
             <div class="col text-center">
-                <button class="btn btn-secondary border btn-text mb-4">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal Add Artist-->
-    <div class="modal fade" id="addArtist" tabindex="-1" aria-labelledby="addArtistLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addArtistLabel">New Artist</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="row">
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Pets</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Style</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Type</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Size</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">BG</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFileMultiple" class="form-label">Pictures</label>
-                        <input class="form-control" type="file" id="formFileMultiple" multiple>
-                    </div>
-                    <div class="col mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Poster Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <button class="btn btn-secondary border btn-text">View More <i class="ms-1 fa-solid fa-angle-down"></i></button>
             </div>
         </div>
     </div>
-
-    <!-- Modal Edit Artist-->
-    <div class="modal fade" id="editArtist" tabindex="-1" aria-labelledby="editArtistLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editArtistLabel">Edit Artist</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                    <div class="row">
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Pets</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Style</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Type</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Size</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="col mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">BG</label>
-                            <input type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Poster Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- End Content -->
 
     <!-- Modal Add Pictures -->
     <div class="modal fade" id="uploadPict" tabindex="-1" aria-labelledby="uploadPict" aria-hidden="true">
@@ -676,6 +522,7 @@
         </div>
     </div>
 
+
     <!-- Modal Delete -->
     <div class="modal fade" id="deleteArtistModal" tabindex="-1" aria-labelledby="deleteArtistModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -695,7 +542,7 @@
         </div>
     </div>
 
-    <!-- Modal Delete Image -->
+    <!-- Modal Delete -->
     <div class="modal fade" id="delImageModal" tabindex="-1" aria-labelledby="delImageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -731,6 +578,7 @@
     <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../../main.js"></script>
+
 </body>
 
 </html>

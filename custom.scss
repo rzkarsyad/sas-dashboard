@@ -1,0 +1,198 @@
+$primary: #3751ff;
+$tab-color: #6b7280;
+$tab-bg: #e5e7eb;
+$border: #f1f1f1;
+$table-bg: #f8f8f9;
+$td-even-bg: #f8f8f8;
+@font-face {
+  font-family: 'Poppins';
+  src: url('./font/Poppins/Poppins-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav.tab-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 12px;
+  @media screen and (min-width: 1024px) {
+    border-bottom: 1px solid #f8f7fd;
+  }
+  .tab-bar-group {
+    display: flex;
+    gap: 10px;
+  }
+  .tab {
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    height: fit-content;
+    &:hover {
+      background: rgba($tab-bg, 0.5);
+    }
+    @media screen and (min-width: 1024px) {
+      padding: 12px;
+    }
+    &.active {
+      background: rgba($primary, 0.1);
+      .tab-name {
+        color: $primary;
+      }
+      .tab-number {
+        color: #ffffff;
+        background-color: $primary;
+      }
+    }
+    .tab-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: $tab-color;
+      margin: 0;
+      padding: 0;
+      @media screen and (min-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+    .tab-number {
+      font-size: 12px;
+      font-weight: 500;
+      color: $tab-color;
+      padding: 2px 8px;
+      background-color: $tab-bg;
+      border-radius: 8px;
+    }
+  }
+  .tab-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    height: fit-content;
+    .label-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: $tab-color;
+      margin: 0;
+      padding: 0;
+      @media screen and (min-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+    .label-number {
+      font-size: 12px;
+      font-weight: 500;
+      color: #fff;
+      padding: 2px 8px;
+      background-color: $primary;
+      border-radius: 8px;
+    }
+  }
+}
+table.expandable-table {
+  thead {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: table-header-group;
+    }
+  }
+  tbody {
+    background-color: $table-bg;
+    @media screen and (min-width: 1024px) {
+      background: #ffffff;
+    }
+    tr {
+      background: #ffffff;
+      margin: 10px 0px;
+      border-bottom: 1px solid $border;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 18px 8px;
+      @media screen and (min-width: 1024px) {
+        display: table-row;
+        background: $table-bg;
+      }
+      td {
+        @media screen and (min-width: 1024px) {
+          vertical-align: middle;
+        }
+        &.startRow,
+        &.endRow {
+          display: none;
+          @media screen and (min-width: 1024px) {
+            display: table-cell;
+          }
+        }
+        &.expandable-cell {
+          display: none;
+          border-radius: 8px;
+          &:nth-of-type(even) {
+            background: $td-even-bg;
+          }
+
+          @media screen and (min-width: 1024px) {
+            display: table-cell;
+            border-radius: 0px;
+            padding: 8px;
+          }
+          .row-label {
+            @media screen and (min-width: 1024px) {
+              display: none;
+            }
+          }
+          &.show {
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 24px;
+            @media screen and (min-width: 1024px) {
+              display: table-cell;
+              padding: 8px;
+            }
+            .row-label {
+              @media screen and (min-width: 1024px) {
+                display: none;
+              }
+            }
+            display: flex;
+          }
+        }
+        &.table-row-header {
+          display: block;
+          padding: 0px;
+          @media screen and (min-width: 1024px) {
+            display: none;
+          }
+          .row-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .name {
+              width: fit-content;
+            }
+            .star {
+              display: flex;
+              align-items: center;
+              width: fit-content;
+              height: fit-content;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.search-input-container {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: 300px;
+  }
+}
