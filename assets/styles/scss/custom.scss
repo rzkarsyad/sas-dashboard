@@ -201,6 +201,11 @@ table.expandable-table {
     }
   }
 }
+tr.collapseContainingDiv {
+  td {
+    background-color: transparent;
+  }
+}
 .search-input-container {
   width: 100%;
   @media screen and (min-width: 768px) {
