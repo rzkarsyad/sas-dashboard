@@ -11136,7 +11136,7 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "Poppins";
-  src: url("./font/Poppins/Poppins-Regular.ttf");
+  src: url("./assets/font/Poppins/Poppins-Regular.ttf");
 }
 * {
   margin: 0;

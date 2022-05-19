@@ -6,7 +6,7 @@ $table-bg: #f8f8f9;
 $td-even-bg: #f8f8f8;
 @font-face {
   font-family: 'Poppins';
-  src: url('./assets/font/Poppins/Poppins-Regular.ttf');
+  src: url('../../../assets/font/Poppins/Poppins-Regular.ttf');
 }
 
 * {
@@ -103,6 +103,9 @@ table.expandable-table {
     @media screen and (min-width: 1024px) {
       display: table-header-group;
     }
+    th {
+      background-color: transparent;
+    }
   }
   tbody {
     background-color: $table-bg;
@@ -122,6 +125,7 @@ table.expandable-table {
         background: $table-bg;
       }
       td {
+        background: transparent;
         @media screen and (min-width: 1024px) {
           vertical-align: middle;
         }

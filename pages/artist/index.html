@@ -4,22 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="../../main.css" />
-    <link rel="stylesheet" href="../../style.css" />
-    <link
-      rel="stylesheet"
-      href="../../node_modules/bootstrap/dist/css/component-custom-switch.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../node_modules/@fortawesome/fontawesome-free/css/all.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../node_modules/@flaticon/css/uicons-regular-rounded.css"
-    />
-
+    <link rel="stylesheet" href="../../assets/styles/css/main.min.css" />
+    <link rel="stylesheet" href="../../assets/styles/css/flaticon/css/uicons-regular-rounded.css" />
+    <link rel="stylesheet" href="../../assets/styles/css/fontawesome/css/all.min.css" />
     <title>Artist - Dashboard</title>
   </head>
 
@@ -47,28 +34,28 @@
     <div class="content-wrapper mt-4">
       <div class="container-fluid">
         <!-- Top Bar -->
-          <div class="search-input-container">
-            <div class="input-group">
-              <input
-                class="form-control border-end-0 border"
-                style="border-radius: 8px"
-                type="search"
-                placeholder="Search"
-                id="example-search-input"
-              />
-              <span class="input-group-append">
-                <button
-                  class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
-                  type="button"
-                >
-                  <i
-                    class="fa fa-search"
-                    style="color: rgba(128, 128, 128, 0.39)"
-                  ></i>
-                </button>
-              </span>
-            </div>
+        <div class="search-input-container">
+          <div class="input-group">
+            <input
+              class="form-control border-end-0 border"
+              style="border-radius: 8px"
+              type="search"
+              placeholder="Search"
+              id="example-search-input"
+            />
+            <span class="input-group-append">
+              <button
+                class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5"
+                type="button"
+              >
+                <i
+                  class="fa fa-search"
+                  style="color: rgba(128, 128, 128, 0.39)"
+                ></i>
+              </button>
+            </span>
           </div>
+        </div>
         <!-- End Topbar -->
 
         <table class="table table-borderless expandable-table mt-4">
@@ -106,8 +93,7 @@
                         >Submit</span
                       >
                       <input type="checkbox" id="st-01" value="1" checked />
-                      <label class="star-sm btn" for="st-01">
-                      </label>
+                      <label class="star-sm btn" for="st-01"> </label>
                     </div>
                     <div class="toggle-expand-table" data-target="#row-1">
                       <i class="fa fa-chevron-down"></i>
@@ -150,7 +136,7 @@
                 <span class="row-label">Pictures</span>
 
                 <img
-                  src="../../img/artwork1.jpg"
+                  src="../../assets/img/artwork1.jpg"
                   width="48"
                   height="48"
                   class="modal-hover-opacity rounded mb-2"
@@ -240,7 +226,7 @@
                 <span class="row-label">Pictures</span>
 
                 <img
-                  src="../../img/artwork2.jpg"
+                  src="../../assets/img/artwork2.jpg"
                   width="48"
                   height="48"
                   class="modal-hover-opacity rounded mb-2"
@@ -329,7 +315,7 @@
                 <span class="row-label">Pictures</span>
 
                 <img
-                  src="../../img/artwork3.jpg"
+                  src="../../assets/img/artwork3.jpg"
                   width="48"
                   height="48"
                   class="modal-hover-opacity rounded mb-2"
@@ -417,7 +403,7 @@
                 <span class="row-label">Pictures</span>
 
                 <img
-                  src="../../img/artwork4.jpg"
+                  src="../../assets/img/artwork4.jpg"
                   width="48"
                   height="48"
                   class="modal-hover-opacity rounded mb-2"
@@ -505,7 +491,7 @@
                 <span class="row-label">Pictures</span>
 
                 <img
-                  src="../../img/artwork5.jpg"
+                  src="../../assets/img/artwork5.jpg"
                   width="48"
                   height="48"
                   class="modal-hover-opacity rounded mb-2"
@@ -676,9 +662,9 @@
       <div id="caption"></div>
     </div>
 
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../../main.js"></script>
+    <script src="../../assets/script/jquery.min.js"></script>
+    <script src="../../assets/script/popper.min.js"></script>
+    <script src="../../assets/script/bootstrap.min.js"></script>
+    <script src="../../assets/script/main.js"></script>
   </body>
 </html>

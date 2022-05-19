@@ -1,0 +1,33 @@
+$badge-padding-y: 0.4em;
+$badge-padding-x: 0.4em;
+
+$border-radius: 0.5rem;
+
+$navbar-nav-link-padding-x: 0.8em;
+$nav-link-padding-y: 0.8rem;
+$nav-link-hover-color: black;
+
+$nav-tabs-link-active-color: #3751FF;
+$nav-tabs-link-active-bg: #EBEEFF;
+$nav-tabs-link-active-border-color: #EBEEFF;
+$nav-pills-border-radius: 0;
+$nav-pills-link-active-color: black;
+$nav-pills-link-active-bg: #F9FAFB;
+
+$theme-colors: (
+  "primary": #3751FF,
+  "secondary":  #FAFAFA,
+  "success":    #00AB66,
+  "info":       #0DCAF0,
+  "warning":   #FFC107,
+  "danger":    #F12B2C,
+  "light":     #F8F9FA,
+  "dark":      #212529,
+);
+
+
+@import "./custom.scss";
+@import "./bootstrap/bootstrap.scss";
+@import "./style.scss";
+@import "./bootstrap/component-custom-switch.scss";
+
